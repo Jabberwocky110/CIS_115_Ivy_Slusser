@@ -1,5 +1,5 @@
-num = input("Enter a Number")
+num1 = input("Enter a Number")
+num2 == 0
+quotient = int(num1)/int(num2)
 
-quotient = int(num)/int(0)
-
-print("{num} divided by {0} is undefined")
+print("{num1} divided by {0} is undefined")
