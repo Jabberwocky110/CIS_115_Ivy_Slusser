@@ -1,3 +1,4 @@
+#This code collects credit card information
 Card_Number = input("Enter your credit card number")
 Expiration_Date = input("Enter your credit card Expiration Date")
 CCV = input("Enter your CCV")
