@@ -1,4 +1,4 @@
-#This code collects address information and prints addresses
+#This code prints addresses
 House_number = "310"
 Street = "Maple Street"
 City = "Maple Town"

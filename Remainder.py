@@ -1,3 +1,4 @@
+#This code determines whether numbers are even or odd by calculating
 num1 = input("Enter a number")
 num2 = int(2)
 remainder = int(num1) % (num2)
