@@ -11,4 +11,4 @@ while count < grades_number:
    grade = int(input("Enter a grade"))
    print(f'The grade entered is {grade}')
    if(count >= grades_number): 
-      print(f'The user is done entering {grades_number} grades')
+      print(f'You inputed {grades_number} of grades')
