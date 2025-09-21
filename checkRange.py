@@ -10,5 +10,3 @@ if Number > Maximum:
     print("Sorry the number you entered is out of range!")
 if Number < Minimum:
     print("Sorry the number you entered is out of range!")
-    
-    
