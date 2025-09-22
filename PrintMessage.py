@@ -1,3 +1,4 @@
+#this code creates two print functions
 def print_message1():
     print("I was called first.")
     print_message2()
