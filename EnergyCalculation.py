@@ -7,6 +7,7 @@ Speed_of_Light = float(2.99 * (10 ** 8))
 unit2 = ("m/s")
 unit3 = ("kJ")
 energy2 = int(mass * (Speed_of_Light ** 2))
+
 def calculate_energy():
     m = float(input("Enter the mass of an object in kilograms."))
     energy = int(m * (Speed_of_Light ** 2))
