@@ -5,7 +5,7 @@ mass = int(3)
 unit1 = ("kg")
 Speed_of_Light = float(2.99 * (10 ** 8))
 unit2 = ("m/s")
-unit3 = ("kJ")
+unit3 = ("J")
 energy2 = int(mass * (Speed_of_Light ** 2))
 #This function converts both of the energies to scientific notation.
 def scientific_notation(number):
