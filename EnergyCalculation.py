@@ -1,5 +1,4 @@
 #This code determines engergy in the Joules unit.
-import math
 #Each value and unit is assigned a variable.
 mass = int(3) 
 unit1 = ("kg")
