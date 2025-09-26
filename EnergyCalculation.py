@@ -1,5 +1,5 @@
 #This code determines engergy in the Joules unit.
-#Each value and unit is assigned a variable.
+#Each value and unit for the 3 kg object is assigned a variable.
 mass = int(3) 
 unit1 = ("kg")
 Speed_of_Light = float(2.99 * (10 ** 8))
