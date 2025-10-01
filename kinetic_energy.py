@@ -1,0 +1,11 @@
+mass = float(input("Enter the mass as a numerical value"))
+unit1 = ("kg")
+print(f'The mass is {mass}{unit1}.')
+velocity = float(input("Enter the velocity as a numerical value."))
+unit2 = ("m/s")
+print(f'The velocity is {velocity}{unit2}.')
+def kinetic_energy(mass, velocity):
+    kinetic_energy = ((mass * (velocity ** 2))/2)
+    unit3 = ("joules")
+    print(f'The kinetic energy is {kinetic_energy}{unit3}.')
+kinetic_energy()
