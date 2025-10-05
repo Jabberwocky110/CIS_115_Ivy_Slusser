@@ -1,7 +1,9 @@
 def months_of_year():
-   startMonth = int(input("Enter the month you want to start with by its number within the year. For example, June: 6"))
-   endMonth = int(input("Enter the month you want to end with by its number within the year."))
    months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-   for months in range(startMonth, endMonth + 1):
-    print(months)
+   startMonth = int(input("Enter the month you want to start with as a numerical value"))
+   endMonth = int(input("Enter the month you want to end with as a numerical value"))
+   startMonth = startMonth - 1
+   while startMonth < endMonth:
+    print(months[startMonth])
+    startMonth = startMonth + 1
 months_of_year()
