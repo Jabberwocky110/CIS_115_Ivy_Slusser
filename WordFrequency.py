@@ -1,6 +1,7 @@
 #This function counts the words in a split string and places them is a dictionary.
 def word_frequency():
     sentence = input("Enter the sentence with the words you want to count")
+    sentence = sentence.lower()
     #The sentence is split on each word.
     sentence_split = sentence.split(" ")
     print(f'Here is every word in the sentence: {sentence_split}')
