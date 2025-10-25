@@ -5,6 +5,8 @@ def word_frequency():
     #The sentence is split on each word.
     sentence_split = sentence.split(" ")
     print(f'Here is every word in the sentence: {sentence_split}')
+    WordCount = len(sentence_split)
+    print(f'Your word count is {WordCount}')
     #An empty dictionary is created.
     Word_dictionary = {
 
