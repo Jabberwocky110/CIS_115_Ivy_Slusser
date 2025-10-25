@@ -1,3 +1,4 @@
+#This code enables a user to print specific values from multiple dictionaries within a list.
 names_and_addresses = [
     {"firstName": "Anna",
      "lastName": "Barns",
@@ -24,7 +25,9 @@ names_and_addresses = [
      }
 ]
 def print_dictionary():
-    key = input("Enter what values you want to print")
+    #The user inputs the key for the values they want to print.
+    key = input("Enter what you want to print")
+    #The loop iterates through each dictionary in the array and prints the user-defined values.
     for value in names_and_addresses:
        item = value[key]
        print(item)
