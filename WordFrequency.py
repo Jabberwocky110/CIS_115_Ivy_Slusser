@@ -14,5 +14,5 @@ def word_frequency():
          word_amount = sentence_split.count(key)
          #Each word count is placed in the dictionary along with each word.
          Word_dictionary[key] = word_amount
-    print(f'The count for each of your word is {Word_dictionary}')
+    print(f'The count for each of your words is {Word_dictionary}')
 word_frequency()
