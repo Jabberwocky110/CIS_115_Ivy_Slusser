@@ -205,6 +205,6 @@ else:
           print(f'{key3}  {Quantity}     ${value2}     {key2}           {total2}')
        if index == ProductNumber2:
           print(f'{key3}  {Quantity2}    ${value2}     {key2}            {total3}')
-Final_Total = total2 + total3
-print("*" * 77)
-print(f'Cart Total: ${Final_Total}')
+   Final_Total = total2 + total3
+   print("*" * 77)
+   print(f'Cart Total: ${Final_Total}')
