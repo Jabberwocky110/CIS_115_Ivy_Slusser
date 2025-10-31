@@ -152,8 +152,11 @@ if answer == "y":
    if Product2 == Product:
      intQuantity = int(Quantity)
      Quantity = intQuantity + 1
+     billing()
    else:
-      cart[Product2] = 1
+      Quantity2 = "1"
+      cart[Product2] = Quantity2
+      billing()
 if answer == "n":
    reply = input("Are you ready to check out?")
    if reply == "y":
@@ -168,18 +171,40 @@ print("*" * 77)
 print("SKU   Quantity   Price      Description               Total    ")
 print("*" * 77)
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
-ProductNumber = int(Product)
-IntQuantity = int(Quantity)
-for indexs, values in enumerate(Catalog.values()):
-   indexs = indexs + 1
-   if indexs == ProductNumber:
-    IntValue2 = float(values)
-    total = IntQuantity * IntValue2
-    break
-for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
-  index = index + 1
-  if index == ProductNumber:
-    print(f'{key3}  {Quantity}     ${value2}     {key2}              {total}')
-    break
-print("*" * 77)
-print(f"Cart Total: ${total}")
+if len(cart) == 1:
+ ProductNumber = int(Product)
+ IntQuantity = int(Quantity)
+ for indexs, values in enumerate(Catalog.values()):
+    indexs = indexs + 1
+    if indexs == ProductNumber:
+     IntValue2 = float(values)
+     total = IntQuantity * IntValue2
+     break
+ for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
+   index = index + 1
+   if index == ProductNumber:
+     print(f'{key3}  {Quantity}     ${value2}     {key2}           {total}')
+     print("*" * 77)
+     print(f"Cart Total: ${total}")
+     break
+else:
+   ProductNumber1 = int(Product)
+   ProductNumber2 = int(Product2)
+   IntQuantity1 = int(Quantity)
+   IntQuantity2 = int(Quantity2)
+   for indexes, valuess in enumerate(Catalog.values()):
+      indexes = indexes + 1
+      if indexes == ProductNumber1:
+          IntValue3 = float(valuess)
+          total2 = IntQuantity1 * IntValue3
+      if indexes == ProductNumber2:
+         IntValue4 = float(valuess)
+         total3 = IntQuantity2 * IntValue4
+   for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
+       index = index + 1
+       if index == ProductNumber1 or ProductNumber2:
+          print(f'{key3}  {Quantity}     ${value2}     {key2}           {total2}')
+          print(f'{key3}  {Quantity}     ${value2}     {key2}           {total3}')
+          Final_Total = total2 + total3
+          print("*" * 77)
+          print(f'Cart Total: ${Final_Total}')
