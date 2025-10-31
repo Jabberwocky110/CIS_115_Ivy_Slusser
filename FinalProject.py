@@ -94,12 +94,6 @@ def validate_credit_card():
        print("Invalid credit card number entered. Please try again.")
        #By recalling the function, users can enter another credit card number.
        validate_credit_card()
-QuantityonHand = {
-   "usb_k981": "1000", 
-   "mbpro_490": "45",
-   "chip_1010": "325", 
-   "cam_78": "98",
-   "smt_tv_100": "225"}
 print("-" * 49)
 space1 = " " * 17
 space2 = "PRODUCT CATALOG"
@@ -120,7 +114,14 @@ Catalog = {
   "Arduino 1010(with blue tooth)": "$48.00",
   "Ring Camera(wireless)": "$156.00",
   "Smart TV(TCL 70 inch)": "$359.00"
-}  
+}
+Quantity_on_Hand = {
+   "usb_k981": "1000", 
+   "mbpro_490": "45",
+   "chip_1010": "325", 
+   "cam_78": "98",
+   "smt_tv_100": "225"}
+Dictionary_List = [CatalogNumbers, Catalog, Quantity_on_Hand]
 lengthList = []
 for key in Catalog.keys():
   length = len(key)
@@ -151,6 +152,8 @@ if answer == "y":
    Product2 = input("Choose a product ID from the product catalog to continue")
    if Product2 == Product:
      Quantity = Quantity +1
+   else:
+      cart.append(Product2)
 if answer == "n":
    reply = input("Are you ready to check out?")
    if reply == "y":
