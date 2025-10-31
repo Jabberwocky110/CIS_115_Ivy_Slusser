@@ -164,14 +164,13 @@ CatologPrint4 = space7 + space8 + space7
 print(CatologPrint4)
 print("-" * 77)
 print("*" * 77)
-Dictionary_List = [CatalogNumbers, Catalog, Quantity_on_Hand, cart]
+print("SKU   Quantity   Price      Description               Total    ")
+print("*" * 77)
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
-for items in Zipped:
-   ProductNumber = enumerate(items)
-IntProduct = int(Product)
-index = IntProduct - 1
-count = 0
-while count == 0:
-  for (key1, value1), (key2, value2), (key3, value3) in zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items()):
-   for index in ProductNumber:
-       print(f'{key3}  {Quantity}  {value2}  {key2}')
+ProductNumber = int(Product)
+for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
+  index = index + 1
+  if index == ProductNumber:
+    print(f'{key3}  {Quantity}  {value2}  {key2}')
+    break
+print("*" * 77)
