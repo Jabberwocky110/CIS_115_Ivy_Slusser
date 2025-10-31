@@ -186,25 +186,25 @@ if len(cart) == 1:
      print(f'{key3}  {Quantity}     ${value2}     {key2}           {total}')
      print("*" * 77)
      print(f"Cart Total: ${total}")
-     break
 else:
    ProductNumber1 = int(Product)
    ProductNumber2 = int(Product2)
    IntQuantity1 = int(Quantity)
    IntQuantity2 = int(Quantity2)
-   for indexes, valuess in enumerate(Catalog.values()):
-      indexes = indexes + 1
-      if indexes == ProductNumber1:
-          IntValue3 = float(valuess)
+   for index, values in enumerate(Catalog.values()):
+      index = index + 1
+      if index == ProductNumber1:
+          IntValue3 = float(values)
           total2 = IntQuantity1 * IntValue3
-      if indexes == ProductNumber2:
-         IntValue4 = float(valuess)
+      if index == ProductNumber2:
+         IntValue4 = float(values)
          total3 = IntQuantity2 * IntValue4
    for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
        index = index + 1
-       if index == ProductNumber1 or ProductNumber2:
+       if index == ProductNumber1:
           print(f'{key3}  {Quantity}     ${value2}     {key2}           {total2}')
-          print(f'{key3}  {Quantity}     ${value2}     {key2}           {total3}')
-          Final_Total = total2 + total3
-          print("*" * 77)
-          print(f'Cart Total: ${Final_Total}')
+       if index == ProductNumber2:
+          print(f'{key3}  {Quantity2}    ${value2}     {key2}            {total3}')
+Final_Total = total2 + total3
+print("*" * 77)
+print(f'Cart Total: ${Final_Total}')
