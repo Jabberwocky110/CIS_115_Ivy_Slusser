@@ -109,11 +109,11 @@ CatalogNumbers = {
   "5": ""
 }
 Catalog = {
-  "USB Drive(128 GB)": "$12.00",
-  "Mac Book Pro(15 inch)": "$2900.00",
-  "Arduino 1010(with blue tooth)": "$48.00",
-  "Ring Camera(wireless)": "$156.00",
-  "Smart TV(TCL 70 inch)": "$359.00"
+  "USB Drive(128 GB)": "12.00",
+  "Mac Book Pro(15 inch)": "2900.00",
+  "Arduino 1010(with blue tooth)": "48.00",
+  "Ring Camera(wireless)": "156.00",
+  "Smart TV(TCL 70 inch)": "359.00"
 }
 Quantity_on_Hand = {
    "usb_k981": "1000", 
@@ -139,7 +139,7 @@ line = "|"
 CatologPrint = space5 + line + space6
 CatologPrint2 = line + space6
 for (key1, value1), (key2, value2), CatalogList in zip(CatalogNumbers.items(), Catalog.items(), CatalogList):
-   print(f'{key1}{CatologPrint}{key2}{CatalogList}{CatologPrint2}{value2}')
+   print(f'{key1}{CatologPrint}{key2}{CatalogList}{CatologPrint2}${value2}')
 Product = input("Choose a product ID from the product catalog to continue")
 Quantity = input(f"Enter quantity for product{Product}")
 cart = {
@@ -150,9 +150,10 @@ answer = input("Would you like to add another product(y or n)?")
 if answer == "y":
    Product2 = input("Choose a product ID from the product catalog to continue")
    if Product2 == Product:
-     Quantity = Quantity +1
+     intQuantity = int(Quantity)
+     Quantity = intQuantity + 1
    else:
-      cart.append(Product2)
+      cart[Product2] = 1
 if answer == "n":
    reply = input("Are you ready to check out?")
    if reply == "y":
@@ -168,9 +169,16 @@ print("SKU   Quantity   Price      Description               Total    ")
 print("*" * 77)
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
 ProductNumber = int(Product)
+IntQuantity = int(Quantity)
+for indexs, values in enumerate(Catalog.values()):
+   indexs = indexs + 1
+   if indexs == ProductNumber:
+    IntValue2 = float(values)
+    total = IntQuantity * IntValue2
+    break
 for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
   index = index + 1
   if index == ProductNumber:
-    print(f'{key3}  {Quantity}  {value2}  {key2}')
+    print(f'{key3}  {Quantity}     ${value2}     {key2}              {total}')
     break
 print("*" * 77)
