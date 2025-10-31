@@ -9,21 +9,21 @@ def billing():
       
    }
    print("Enter your billing/shipping information:")
-   First_Name = input("Enter your first name")
+   First_Name = input("Enter your first name ")
    first_name_dictionary["First Name"] = First_Name
-   Last_Name = input("Enter your last name")
+   Last_Name = input("Enter your last name ")
    last_name_dictionary["Last Name"] = Last_Name
-   Address = input("Enter your mailing address")
+   Address = input("Enter your mailing address" )
    billing_dictionary["Address:"] = Address
-   City = input("Enter your city")
+   City = input("Enter your city ")
    billing_dictionary["City:"] = City
-   State = input("Enter your state")
+   State = input("Enter your state ")
    billing_dictionary["State:"] = State
-   Zip_Code = input("Enter you zip or postal code")
+   Zip_Code = input("Enter you zip or postal code ")
    billing_dictionary["Zip/Post Code:"] = Zip_Code
-   Email = input("Enter your email address")
+   Email = input("Enter your email address ")
    billing_dictionary["Email:"] = Email
-   Phone = input("Enter your phone number")
+   Phone = input("Enter your phone number ")
    billing_dictionary["Phone:"] = Phone
    validate_credit_card()
    print("-" * 77)
