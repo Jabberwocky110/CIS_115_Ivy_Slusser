@@ -121,7 +121,6 @@ Quantity_on_Hand = {
    "chip_1010": "325", 
    "cam_78": "98",
    "smt_tv_100": "225"}
-Dictionary_List = [CatalogNumbers, Catalog, Quantity_on_Hand]
 lengthList = []
 for key in Catalog.keys():
   length = len(key)
@@ -165,3 +164,4 @@ CatologPrint4 = space7 + space8 + space7
 print(CatologPrint4)
 print("-" * 77)
 print("*" * 77)
+Dictionary_List = [CatalogNumbers, Catalog, Quantity_on_Hand, cart]
