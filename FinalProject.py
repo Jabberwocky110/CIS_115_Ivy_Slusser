@@ -182,3 +182,4 @@ for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped)
     print(f'{key3}  {Quantity}     ${value2}     {key2}              {total}')
     break
 print("*" * 77)
+print(f"Cart Total: ${total}")
