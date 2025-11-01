@@ -9,21 +9,21 @@ def billing():
       
    }
    print("Enter your billing/shipping information:")
-   First_Name = input("Enter your first name ")
+   First_Name = input("Enter your first name: ")
    first_name_dictionary["First Name"] = First_Name
-   Last_Name = input("Enter your last name ")
+   Last_Name = input("Enter your last name: ")
    last_name_dictionary["Last Name"] = Last_Name
-   Address = input("Enter your mailing address" )
+   Address = input("Enter your mailing address:" )
    billing_dictionary["Address:"] = Address
-   City = input("Enter your city ")
+   City = input("Enter your city: ")
    billing_dictionary["City:"] = City
-   State = input("Enter your state ")
+   State = input("Enter your state: ")
    billing_dictionary["State:"] = State
-   Zip_Code = input("Enter you zip or postal code ")
+   Zip_Code = input("Enter you zip or postal code: ")
    billing_dictionary["Zip/Post Code:"] = Zip_Code
-   Email = input("Enter your email address ")
+   Email = input("Enter your email address: ")
    billing_dictionary["Email:"] = Email
-   Phone = input("Enter your phone number ")
+   Phone = input("Enter your phone number: ")
    billing_dictionary["Phone:"] = Phone
    validate_credit_card()
    print("-" * 77)
@@ -41,7 +41,7 @@ def billing():
       print(f'{key} {value}')
 #This code checks if a credit card is valid.
 def validate_credit_card():
-    ccNum = input("Please enter your credit card number")
+    ccNum = input("Please enter your credit card number ")
     #The number is reversed and assigned to a new variable.
     ccNumReverse = ccNum[::-1]
     cardNumberList = []
@@ -88,8 +88,8 @@ def validate_credit_card():
     #If the total divied by ten is equal to zero, the code prints valid.
     if mod10 == 0:
        print(f'The credit card number {ccNum} is valid!')
-       Expiration_Date = input("Enter the expiration date on your card:")
-       CVV = input("Please enter your CVV:")
+       Expiration_Date = input("Enter the expiration date on your card: ")
+       CVV = input("Please enter your CVV: ")
     else:
        print("Invalid credit card number entered. Please try again.")
        #By recalling the function, users can enter another credit card number.
@@ -140,15 +140,15 @@ CatologPrint = space5 + line + space6
 CatologPrint2 = line + space6
 for (key1, value1), (key2, value2), CatalogList in zip(CatalogNumbers.items(), Catalog.items(), CatalogList):
    print(f'{key1}{CatologPrint}{key2}{CatalogList}{CatologPrint2}${value2}')
-Product = input("Choose a product ID from the product catalog to continue")
+Product = input("Choose a product ID from the product catalog to continue: ")
 Quantity = input(f"Enter quantity for product{Product}")
 cart = {
    
 }
 cart[Product] = Quantity
-answer = input("Would you like to add another product(y or n)?")
+answer = input("Would you like to add another product(y or n)?" )
 if answer == "y":
-   Product2 = input("Choose a product ID from the product catalog to continue")
+   Product2 = input("Choose a product ID from the product catalog to continue: ")
    if Product2 == Product:
      intQuantity = int(Quantity)
      Quantity = intQuantity + 1
@@ -158,7 +158,7 @@ if answer == "y":
       cart[Product2] = Quantity2
       billing()
 if answer == "n":
-   reply = input("Are you ready to check out?")
+   reply = input("Are you ready to check out? ")
    if reply == "y":
      billing()
 print("-" * 77)
