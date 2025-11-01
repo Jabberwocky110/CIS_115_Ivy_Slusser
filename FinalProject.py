@@ -183,7 +183,7 @@ if len(cart) == 1:
  for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(Zipped):
    index = index + 1
    if index == ProductNumber:
-     print(f'{key3}  {Quantity}     ${value2}     {key2}           {total}')
+     print(f'{key3}  {Quantity}     ${value2}     {key2}                 {total}')
      print("*" * 77)
      print(f"Cart Total: ${total}")
 else:
