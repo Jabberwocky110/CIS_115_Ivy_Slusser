@@ -161,7 +161,7 @@ CatalogList = []
 for numbers in spaceList:
    CatologPrint3 = " " * numbers
    CatalogList.append(CatologPrint3)
-#The same is done for the catalog SKUs.
+#The same is done for the catalog SKUs to get the spacing even.
 QuantityLength = []
 for key in Quantity_on_Hand.keys():
    lengt = len(key)
@@ -227,7 +227,7 @@ print(CatologPrint4)
 print("-" * 77)
 print("*" * 77)
 #Subtitles are printed for everything in the cart.
-print("SKU   Quantity   Price      Description                Total")
+print("SKU     Quantity   Price      Description                    Total")
 print("*" * 77)
 #The dictionaries, pertaining to the product and the spacing list are zipped.
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items(), CatalogList, CatalogList2)
@@ -279,9 +279,9 @@ else:
        index = index + 1
        #The cart for both products is printed on seperate lines.
        if index == ProductNumber1:
-          print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList} ${total2}')
+          print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList}${total2}')
        if index == ProductNumber2:
-          print(f'{key3}{CatalogList2}{Quantity2}    ${value2}     {key2} {CatalogList} ${total3}')
+          print(f'{key3}{CatalogList2}{Quantity2}    ${value2}     {key2} {CatalogList}${total3}')
    #The final total is calculated by adding the totals for both items.
    Final_Total = total2 + total3
    print("*" * 77)
