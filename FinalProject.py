@@ -161,6 +161,21 @@ CatalogList = []
 for numbers in spaceList:
    CatologPrint3 = " " * numbers
    CatalogList.append(CatologPrint3)
+#The same is done for the catalog SKUs.
+QuantityLength = []
+for key in Quantity_on_Hand.keys():
+   lengt = len(key)
+   QuantityLength.append(lengt)
+spacelist2 = []
+for value in QuantityLength:
+   #11 is one higher than the longest SKU number
+   value6 = int(11 - value)
+   #There is at least one space between the SKU numbers and the quanities.
+   spacelist2.append(value6)
+CatalogList2 = []
+for numbers in spacelist2:
+   CatologPrint5 = " " * numbers
+   CatalogList2.append(CatologPrint5)
 #Variables are created for specific space lengths.
 space5 = " " * 3
 space6 = " " * 2
@@ -215,7 +230,7 @@ print("*" * 77)
 print("SKU   Quantity   Price      Description                Total")
 print("*" * 77)
 #The dictionaries, pertaining to the product and the spacing list are zipped.
-Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items(), CatalogList)
+Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items(), CatalogList, CatalogList2)
 #If the user choose only one item, the item is printed once.
 if len(cart) == 1:
  #The product number is converted to an integer.
@@ -233,12 +248,12 @@ if len(cart) == 1:
      #The total is calculated by multiplying the quanity by the price.
      total = IntQuantity * IntValue2
  #The zipped dictionary is enumerated with indexs, and each key and value is placed in a pair.
- for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList) in enumerate(Zipped):
+ for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
    index = index + 1
    #When the index of the combined dictionary equals the product number, the cart is print.
    if index == ProductNumber:
      #Since the keys and values are paired in the loop, it can print specific keys and values here.
-     print(f'{key3}  {Quantity}     ${value2}     {key2} {CatalogList} ${total}')
+     print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList} ${total}')
      print("*" * 77)
      #The cart total is printed.
      print(f"Cart Total: ${total}")
@@ -260,13 +275,13 @@ else:
          IntValue4 = float(values)
          total3 = IntQuantity2 * IntValue4
     #The zipped dictionary is granted an index and each of the keys and values are iterated through.
-   for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList) in enumerate(Zipped):
+   for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
        index = index + 1
        #The cart for both products is printed on seperate lines.
        if index == ProductNumber1:
-          print(f'{key3}  {Quantity}     ${value2}     {key2} {CatalogList} ${total2}')
+          print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList} ${total2}')
        if index == ProductNumber2:
-          print(f'{key3}  {Quantity2}    ${value2}     {key2} {CatalogList} ${total3}')
+          print(f'{key3}{CatalogList2}{Quantity2}    ${value2}     {key2} {CatalogList} ${total3}')
    #The final total is calculated by adding the totals for both items.
    Final_Total = total2 + total3
    print("*" * 77)
