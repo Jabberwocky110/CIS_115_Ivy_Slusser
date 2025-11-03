@@ -119,7 +119,7 @@ print(space4)
 print("-" * 49)
 #This dictionary contains the catolog numbers as keys without any values.
 CatalogNumbers = {
-  "1":"",
+  "1": "",
   "2": "",
   "3": "",
   "4": "",
