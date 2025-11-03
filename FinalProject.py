@@ -227,7 +227,7 @@ print(CatologPrint4)
 print("-" * 77)
 print("*" * 77)
 #Subtitles are printed for everything in the cart.
-print("SKU     Quantity   Price      Description                    Total")
+print("SKU     Quantity   Price      Description          Total")
 print("*" * 77)
 #The dictionaries, pertaining to the product and the spacing list are zipped.
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items(), CatalogList, CatalogList2)
