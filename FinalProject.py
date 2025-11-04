@@ -195,7 +195,7 @@ Quantity = input(f"Enter quantity for product{Product}")
 cart = {
    
 }
-#The prodcut and its quantity are appended to the cart.
+#The prodcut and its quantity are placed in the cart.
 cart[Product] = Quantity
 #The user has the option to choose another product.
 answer = input("Would you like to add another product(y or n)?" )
