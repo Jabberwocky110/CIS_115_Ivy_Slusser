@@ -288,12 +288,11 @@ else:
     #The zipped dictionary is granted an index and each of the keys and values are iterated through.
    LessZipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
    ZippedList = zip(CatalogList, CatalogList2)
-   for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(LessZipped) and index, (CatalogList, CatalogList2) in enumerate(ZippedList):
+   for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(LessZipped) and (CatalogList, CatalogList2) in enumerate(ZippedList):
         index = index + 1
         #The cart for both products is printed on seperate lines.
         if index == ProductNumber1:
           print(f'{key3}{CatalogList2}{Quantity}{CatalogList}   ${value2}     {key2} {CatalogList}   ${total2}')
-          print(f'')
         if index == ProductNumber2:
           print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}      {key2} {CatalogList}  ${total3}')
    #The final total is calculated by adding the totals for both items.
