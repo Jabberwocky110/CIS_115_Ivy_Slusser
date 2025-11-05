@@ -18,7 +18,7 @@ def billing():
    Last_Name = input("Enter your last name: ")
    #The last name is placed in a seperate dictionary.
    last_name_dictionary["Last Name"] = Last_Name
-   Address = input("Enter your mailing address:" )
+   Address = input("Enter your mailing address: ")
    #All the other information is kept in a general billing dictionary.
    billing_dictionary["Address:"] = Address
    City = input("Enter your city: ")
@@ -226,9 +226,6 @@ CatologPrint4 = space7 + space8 + space7
 print(CatologPrint4)
 print("-" * 77)
 print("*" * 77)
-#Subtitles are printed for everything in the cart.
-print("SKU     Quantity   Price      Description          Total")
-print("*" * 77)
 #The dictionaries, pertaining to the product and the spacing list are zipped.
 Zipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items(), CatalogList, CatalogList2)
 #If the user choose only one item, the item is printed once.
@@ -237,6 +234,13 @@ if len(cart) == 1:
  ProductNumber = int(Product)
  #The quantity is converted to an integer.
  IntQuantity = int(Quantity)
+ #Subtitles are printed for everything in the cart.
+ index = 0
+ for values in CatalogList:
+  index = index + 1
+  if index == ProductNumber:
+   print(f"SKU     Quantity   Price     Description{CatalogList}Total")
+   print("*" * 77)
  #The catalog is enumerated, which essentially creating indexs for a dictionary in this case.
  for indexs, values in enumerate(Catalog.values()):
     #The index is incremented so the loop will only calculated the total for one item.
@@ -248,7 +252,7 @@ if len(cart) == 1:
      #The total is calculated by multiplying the quanity by the price.
      total = IntQuantity * IntValue2
  #The zipped dictionary is enumerated with indexs, and each key and value is placed in a pair.
- for index, (key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2 in enumerate(Zipped):
+ for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
    index = index + 1
    #When the index of the combined dictionary equals the product number, the cart is print.
    if index == ProductNumber:
