@@ -273,7 +273,7 @@ else:
    for values in CatalogList:
     index = index + 1
     if index == ProductNumber1:
-     print(f"SKU     Quantity   Price     Description{CatalogList}Total")
+     print(f"SKU     Quantity   Price     Description{CatalogList}     Total")
      print("*" * 77)
    #The catalog values are granted indexs and taked from the catalog dictionary without the keys.
    for index, values in enumerate(Catalog.values()):
@@ -286,13 +286,16 @@ else:
          IntValue4 = float(values)
          total3 = IntQuantity2 * IntValue4
     #The zipped dictionary is granted an index and each of the keys and values are iterated through.
-   for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
-       index = index + 1
-       #The cart for both products is printed on seperate lines.
-       if index == ProductNumber1:
-          print(f'{key3}{CatalogList2}{Quantity}{CatalogList}   ${value2}     {key2} {CatalogList}${total2}')
-       if index == ProductNumber2:
-          print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}      {key2} {CatalogList}${total3}')
+   LessZipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
+   ZippedList = zip(CatalogList, CatalogList2)
+   for (CatalogList, CatalogList2) in ZippedList:
+    for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(LessZipped):
+        index = index + 1
+        #The cart for both products is printed on seperate lines.
+        if index == ProductNumber1:
+          print(f'{key3}{CatalogList2}{Quantity}{CatalogList}   ${value2}     {key2} {CatalogList}   ${total2}')
+        if index == ProductNumber2:
+          print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}      {key2} {CatalogList}  ${total3}')
    #The final total is calculated by adding the totals for both items.
    Final_Total = total2 + total3
    print("*" * 77)
