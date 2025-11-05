@@ -183,7 +183,7 @@ line = "|"
 #The variables are combined to customize the catalog print.
 CatologPrint = space5 + line + space6
 CatologPrint2 = line + space6
-#Each of the dictionaries and the list of spaces are combined, using the zip function and items function. This is so the items are printed together without dictionary format.
+#Each of the dictionaries and the list of spaces are combined, using the zip function and items function. This is so the items are printed together and returned without dictionary format.
 for (key1, value1), (key2, value2), CatalogList in zip(CatalogNumbers.items(), Catalog.items(), CatalogList):
    #The values for the catalog dictionaries are iterated through and printed on the same lines.
    print(f'{key1}{CatologPrint}{key2}{CatalogList}{CatologPrint2}${value2}')
@@ -281,7 +281,7 @@ else:
        if index == ProductNumber1:
           print(f'{key3}{CatalogList2}{Quantity}{CatalogList}   ${value2}     {key2} {CatalogList}${total2}')
        if index == ProductNumber2:
-          print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}     {key2} {CatalogList}${total3}')
+          print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}      {key2} {CatalogList}${total3}')
    #The final total is calculated by adding the totals for both items.
    Final_Total = total2 + total3
    print("*" * 77)
