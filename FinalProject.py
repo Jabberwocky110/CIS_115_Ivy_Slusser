@@ -268,6 +268,13 @@ else:
    ProductNumber2 = int(Product2)
    IntQuantity1 = int(Quantity)
    IntQuantity2 = int(Quantity2)
+   #Subtitles with custom spacing after the product descriptions are printed for everything in the cart.
+   index = 0
+   for values in CatalogList:
+    index = index + 1
+    if index == ProductNumber1:
+     print(f"SKU     Quantity   Price     Description{CatalogList}Total")
+     print("*" * 77)
    #The catalog values are granted indexs and taked from the catalog dictionary without the keys.
    for index, values in enumerate(Catalog.values()):
       index = index + 1
