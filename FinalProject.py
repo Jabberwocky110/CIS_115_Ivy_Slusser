@@ -234,7 +234,7 @@ if len(cart) == 1:
  ProductNumber = int(Product)
  #The quantity is converted to an integer.
  IntQuantity = int(Quantity)
- #Subtitles are printed for everything in the cart.
+ #Subtitles with custom spacing after the product descriptions are printed for everything in the cart.
  index = 0
  for values in CatalogList:
   index = index + 1
@@ -257,7 +257,7 @@ if len(cart) == 1:
    #When the index of the combined dictionary equals the product number, the cart is print.
    if index == ProductNumber:
      #Since the keys and values are paired in the loop, it can print specific keys and values here.
-     print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList} ${total}')
+     print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList}${total}')
      print("*" * 77)
      #The cart total is printed.
      print(f"Cart Total: ${total}")
