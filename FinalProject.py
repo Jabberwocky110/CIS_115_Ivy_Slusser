@@ -248,7 +248,7 @@ if len(cart) == 1:
      #The total is calculated by multiplying the quanity by the price.
      total = IntQuantity * IntValue2
  #The zipped dictionary is enumerated with indexs, and each key and value is placed in a pair.
- for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
+ for index, (key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2 in enumerate(Zipped):
    index = index + 1
    #When the index of the combined dictionary equals the product number, the cart is print.
    if index == ProductNumber:
@@ -279,9 +279,9 @@ else:
        index = index + 1
        #The cart for both products is printed on seperate lines.
        if index == ProductNumber1:
-          print(f'{key3}{CatalogList2}{Quantity}     ${value2}     {key2} {CatalogList}${total2}')
+          print(f'{key3}{CatalogList2}{Quantity}{CatalogList}   ${value2}     {key2} {CatalogList}${total2}')
        if index == ProductNumber2:
-          print(f'{key3}{CatalogList2}{Quantity2}    ${value2}     {key2} {CatalogList}${total3}')
+          print(f'{key3}{CatalogList2}{Quantity2}{CatalogList}  ${value2}     {key2} {CatalogList}${total3}')
    #The final total is calculated by adding the totals for both items.
    Final_Total = total2 + total3
    print("*" * 77)
