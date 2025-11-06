@@ -272,6 +272,7 @@ else:
    index = 0
    for values in CatalogList:
     index = index + 1
+    #The spacing of the total subtitle varies for different items in the cart.
     if index == ProductNumber1:
      print(f"SKU     Quantity   Price     Description{CatalogList}     Total")
      print("*" * 77)
@@ -286,9 +287,7 @@ else:
          IntValue4 = float(values)
          total3 = IntQuantity2 * IntValue4
     #The zipped dictionary is granted an index and each of the keys and values are iterated through.
-   LessZipped = zip(CatalogNumbers.items(), Catalog.items(), Quantity_on_Hand.items())
-   ZippedList = zip(CatalogList, CatalogList2)
-   for index, ((key1, value1), (key2, value2), (key3, value3)) in enumerate(LessZipped) and (CatalogList, CatalogList2) in enumerate(ZippedList):
+   for index, ((key1, value1), (key2, value2), (key3, value3), CatalogList, CatalogList2) in enumerate(Zipped):
         index = index + 1
         #The cart for both products is printed on seperate lines.
         if index == ProductNumber1:
