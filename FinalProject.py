@@ -176,6 +176,7 @@ CatalogList2 = []
 for numbers in spacelist2:
    CatologPrint5 = " " * numbers
    CatalogList2.append(CatologPrint5)
+#Another spacing customization is created.
 CatalogList3 = []
 for value in spaceList:
    value7 = value + 3
