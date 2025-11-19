@@ -220,11 +220,11 @@ if answer == "y":
       #The billing function is called.
       billing()
 if answer == "n":
-   reply = input("Are you ready to check out? ")
-   for cart.values in enumerate(Quantity_on_Hand):
-     values = cart.values
+   for index, values in enumerate(Quantity_on_Hand.values()):
      if Quantity > values:
         print("Quanity on hand exceeded. Order less products")
+        
+   reply = input("Are you ready to check out? ")
    if reply == "y":
      #When the user checks out, the billing function is called.
      billing()
