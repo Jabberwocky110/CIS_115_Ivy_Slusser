@@ -209,7 +209,6 @@ if answer == "y":
  ProductInt= int(Product)
  #This checks if the quanity has been exceeded before asking the user to check out.
  for index, value in enumerate(Quantity_on_Hand.values(), start=1):
-     ProductInt= int(Product)
      if index == ProductInt:
        #To be compared, the value and quanity need to be integers.
        intValue = int(value)
@@ -236,7 +235,6 @@ elif answer == "n":
   ProductInt= int(Product)
   #This checks if the quanity has been exceeded before asking the user to check out.
   for index, value in enumerate(Quantity_on_Hand.values(), start=1):
-     ProductInt= int(Product)
      if index == ProductInt:
        #To be compared, the value and quanity need to be integers.
        intValue = int(value)
