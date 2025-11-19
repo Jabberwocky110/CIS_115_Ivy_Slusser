@@ -206,19 +206,32 @@ cart[Product] = Quantity
 #The user has the option to choose another product.
 answer = input("Would you like to add another product(y or n)?" )
 if answer == "y":
-   Product2 = input("Choose a product ID from the product catalog to continue: ")
-   #If the user chooses the same product, the quantity is incremented. 
-   if Product2 == Product:
-     intQuantity = int(Quantity)
-     Quantity = intQuantity + 1
-     #The billing function is called because the user is done choosing.
-     billing()
-   else:
-      #A new product is added to the cart with a quantity of one.
-      Quantity2 = "1"
-      cart[Product2] = Quantity2
-      #The billing function is called.
-      billing()
+ ProductInt= int(Product)
+ #This checks if the quanity has been exceeded before asking the user to check out.
+ for index, value in enumerate(Quantity_on_Hand.values(), start=1):
+     ProductInt= int(Product)
+     if index == ProductInt:
+       #To be compared, the value and quanity need to be integers.
+       intValue = int(value)
+       intquanity = int(Quantity)
+       if intValue > intquanity:
+         Product2 = input("Choose a product ID from the product catalog to continue: ")
+         #If the user chooses the same product, the quantity is incremented. 
+         if Product2 == Product:
+          intQuantity = int(Quantity)
+          Quantity = intQuantity + 1
+          #The billing function is called because the user is done choosing.
+          billing()
+         else:
+           #A new product is added to the cart with a quantity of one.
+           Quantity2 = "1"
+           cart[Product2] = Quantity2
+           #The billing function is called.
+           billing()
+       else:
+        print("Quanity on hand exceeded. The excess products have been put on hold.")
+        QuantityOnHold = intValue- intquanity
+        billing()
 elif answer == "n":
   ProductInt= int(Product)
   #This checks if the quanity has been exceeded before asking the user to check out.
