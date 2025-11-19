@@ -233,6 +233,10 @@ elif answer == "n":
         if reply == "yes":
            #When the user checks out, the billing function is called.
            billing()
+        else:
+         #If the user does not want to check out, their order is cancelled.
+         print("Order cancelled")  
+         break
        else:
         print("Quanity on hand exceeded. The excess products have been put on hold.")
         QuantityOnHold = intValue- intquanity
