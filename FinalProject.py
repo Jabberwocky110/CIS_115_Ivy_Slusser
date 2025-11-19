@@ -219,21 +219,23 @@ if answer == "y":
       cart[Product2] = Quantity2
       #The billing function is called.
       billing()
-else:
-   for index, value in enumerate(Quantity_on_Hand.values()):
-     index = index + 1
-     if index == Product:
-       if Quantity <= value:
-         reply = input("Are you ready to check out? (yes or no)")
-         if reply == "yes":
+elif answer == "n":
+  ProductInt= int(Product)
+  #This checks if the quanity has been exceeded before asking the user to check out.
+  for index, value in enumerate(Quantity_on_Hand.values(), start=1):
+     ProductInt= int(Product)
+     if index == ProductInt:
+       #To be compared, the value and quanity need to be integers.
+       intValue = int(value)
+       intquanity = int(Quantity)
+       if intValue > intquanity:
+        reply = input("Are you ready to check out? (yes or no)")
+        if reply == "yes":
            #When the user checks out, the billing function is called.
            billing()
        else:
-        print("Quanity on hand exceeded. The excess products have been put on hold")
-        intValue = int(value)
-        intquanity = int(Quantity)
+        print("Quanity on hand exceeded. The excess products have been put on hold.")
         QuantityOnHold = intValue- intquanity
-        Quantity = value
 print("-" * 77)
 space7 = " " * 25
 space8 = "Shopping Cart Information"
