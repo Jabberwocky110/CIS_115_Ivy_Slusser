@@ -236,6 +236,7 @@ elif answer == "n":
        else:
         print("Quanity on hand exceeded. The excess products have been put on hold.")
         QuantityOnHold = intValue- intquanity
+        billing()
 print("-" * 77)
 space7 = " " * 25
 space8 = "Shopping Cart Information"
