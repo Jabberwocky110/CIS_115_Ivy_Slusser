@@ -27,6 +27,16 @@ Letter_dictionary = {
 "y": 24,
 "z": 25
             }
+countList = []
 for index, value in enumerate(Letter_dictionary.keys()):
     count = code.count(value)
-    print(f'Value: {value}, Occurrences: {count}')
+    countList.append(count)
+print(f'{countList}')
+IntialChessboardArrangement = [0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0, 
+                               0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0,
+                               0, 0, 0, 0, 0, 0, 0, 0]
