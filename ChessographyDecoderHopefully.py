@@ -1,9 +1,4 @@
 code = input("Input the words: ")
-letter = input("What letter would you like to be counted? It is recommended to choose in alphabetical order.")
-Count_Letter = code.count(letter)
-print(f'The letter count is {Count_Letter}.')
-Letter_list = [Count_Letter]
-keep_going = True
 Letter_dictionary = {
 "a":0,
 "b":1,
@@ -32,13 +27,6 @@ Letter_dictionary = {
 "y": 24,
 "z": 25
             }
-while keep_going is True:
-    answer = input("Would you like another letter to be counted? (yes or no)")
-    if answer == "yes":
-        Loop_letter = input("What letter would you like to be counted?")
-        Loop_Count_Letter = code.count(Loop_letter)
-        print(f'The letter count is {Loop_Count_Letter}.')
-        Letter_list.append(Loop_Count_Letter)
-    else:
-        keep_going = False
-        print(f'The letter counts were {Letter_list}')
+for index, value in enumerate(Letter_dictionary.keys()):
+    count = code.count(value)
+    print(f'Value: {value}, Occurrences: {count}')
