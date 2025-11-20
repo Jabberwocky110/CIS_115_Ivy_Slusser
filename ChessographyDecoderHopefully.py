@@ -65,4 +65,20 @@ InitialRookarray = [1, 0, 0, 0, 0, 0, 0, 0,
 InitialKnightarray = [ 1 ,
                     0  ,  0,
                      0,  0]
-IntialBishoparray = [1]
+IntialBishoparray = [  1,
+                    0,  0,
+                         0,
+                          0,
+                           0,
+                            0,
+                             0,
+                              0]
+InitialQueenarray = [1, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0,
+                     0,     0, 
+                     0,        0,
+                     0,           0, 
+                     0,             0,
+                     0,                0,
+                     0,                    0]
+
