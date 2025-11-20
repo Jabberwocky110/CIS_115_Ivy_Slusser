@@ -51,3 +51,18 @@ Rook = "R"
 Knight = "N"
 Bishop = "B"
 Queen = "Q"
+King = "K"
+InitialPawnarray = [1,
+                   0, 0, 0]
+InitialRookarray = [1, 0, 0, 0, 0, 0, 0, 0,
+                    0, 
+                    0, 
+                    0, 
+                    0, 
+                    0, 
+                    0, 
+                    0]
+InitialKnightarray = [ 1 ,
+                    0  ,  0,
+                     0,  0]
+IntialBishoparray = [1]
