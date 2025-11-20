@@ -40,3 +40,14 @@ IntialChessboardArrangement = [0, 0, 0, 0, 0, 0, 0, 0,
                                0, 0, 0, 0, 0, 0, 0, 0,
                                0, 0, 0, 0, 0, 0, 0, 0,
                                0, 0, 0, 0, 0, 0, 0, 0]
+On = 1
+Off = 0
+PossibleInitialletterArray = ["a", "b", "c", "d", "e", "f",
+                              "g", "h", "i", "j", "k", "l",
+                              "m", "n", "o", "p", "r", "s"
+                              "t", "u", "v", "w", "x", "y"]
+Pawn = "P"
+Rook = "R"
+Knight = "N"
+Bishop = "B"
+Queen = "Q"
