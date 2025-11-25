@@ -211,7 +211,7 @@ if intNextPlacement2 != intNextPlacement:
    print("Inavlid input. You can not place a piece there")
 else:
   print("Inavlid input. You can not place a piece there")
-Placement3 = ("Player one, choose where you will place your third piece ")
+Placement3 = input("Player one, choose where you will place your third piece ")
 intPlacement3 = int(Placement3)
 if intPlacement3 != intNextPlacement:
  if intPlacement3 != intPlacement:
@@ -226,3 +226,16 @@ if intPlacement3 != intNextPlacement:
    print("Inavlid input. You can not place a piece there")
 else:
   print("Inavlid input. You can not place a piece there")
+for index, values in enumerate(TicTacToeArray):
+    if values[0] == "X" and values[1] == "X" and values[2] == "X":
+      print("Player One wins!")
+    else:
+         if all(sublist[0] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          break
+         elif all(sublist[1] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          break
+         elif all(sublist[2] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          break
