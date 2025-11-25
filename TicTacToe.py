@@ -1,3 +1,70 @@
+End = False
+def EndConditionsX():
+ global End
+ for index, values in enumerate(TicTacToeArray):
+    if values[0] == "X" and values[1] == "X" and values[2] == "X":
+      print("Player One wins!")
+      End = True
+    else:
+         if all(sublist[0] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          End = True
+          break
+         elif all(sublist[1] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          End = True
+          break
+         elif all(sublist[2] == "X" for sublist in TicTacToeArray):
+          print("Player One wins!")
+          End = True
+          break
+    value1 = TicTacToeArray[0][0]
+    value2 = TicTacToeArray[1][1]
+    value3 = TicTacToeArray[2][2]
+    if value1 == "X" and value2 == "X" and value3 == "X":
+      print("Player One wins!")
+      End = True
+      break
+    value4 = TicTacToeArray[0][2]
+    value5 = TicTacToeArray[1][1]
+    value6 = TicTacToeArray[2][0]
+    if value4 == "X" and value5 == "X" and value6 == "X":
+      print("Player One wins!")
+      End = True
+      break
+def EndConditionsO():
+  global End
+  for index, values in enumerate(TicTacToeArray):
+    if values[0] == "O" and values[1] == "O" and values[2] == "O":
+      print("Player Two wins!")
+      End = True
+    else:
+         if all(sublist[0] == "O" for sublist in TicTacToeArray):
+          print("Player Two wins!")
+          End = True
+          break
+         elif all(sublist[1] == "O" for sublist in TicTacToeArray):
+          print("Player Two wins!")
+          End = True
+          break
+         elif all(sublist[2] == "O" for sublist in TicTacToeArray):
+          print("Player Two wins!")
+          End = True
+          break
+    value1 = TicTacToeArray[0][0]
+    value2 = TicTacToeArray[1][1]
+    value3 = TicTacToeArray[2][2]
+    if value1 == "O" and value2 == "O" and value3 == "O":
+      print("Player Two wins!")
+      End = True
+      break
+    value4 = TicTacToeArray[0][2]
+    value5 = TicTacToeArray[1][1]
+    value6 = TicTacToeArray[2][0]
+    if value4 == "O" and value5 == "O" and value6 == "O":
+      print("Player Two wins!")
+      End = True
+      break
 TicTacToeArray = [[0, 0, 0],
                   [0, 0, 0],
                   [0, 0, 0]]
@@ -218,6 +285,7 @@ if intPlacement3 != intNextPlacement:
    if intPlacement3 != intPlacement2:
      if intPlacement3 != intNextPlacement2:
        XPlacement(intPlacement3)
+       EndConditionsX()
      else:
        print("Inavlid input. You can not place a piece there")
    else: 
@@ -226,28 +294,23 @@ if intPlacement3 != intNextPlacement:
    print("Inavlid input. You can not place a piece there")
 else:
   print("Inavlid input. You can not place a piece there")
-for index, values in enumerate(TicTacToeArray):
-    if values[0] == "X" and values[1] == "X" and values[2] == "X":
-      print("Player One wins!")
-    else:
-         if all(sublist[0] == "X" for sublist in TicTacToeArray):
-          print("Player One wins!")
-          break
-         elif all(sublist[1] == "X" for sublist in TicTacToeArray):
-          print("Player One wins!")
-          break
-         elif all(sublist[2] == "X" for sublist in TicTacToeArray):
-          print("Player One wins!")
-          break
-    value1 = TicTacToeArray[0][0]
-    value2 = TicTacToeArray[1][1]
-    value3 = TicTacToeArray[2][2]
-    if value1 == "X" and value2 == "X" and value3 == "X":
-      print("Player One wins!")
-      break
-    value4 = TicTacToeArray[0][2]
-    value5 = TicTacToeArray[1][1]
-    value6 = TicTacToeArray[2][0]
-    if value4 == "X" and value5 == "X" and value6 == "X":
-      print("Player One wins!")
-      break
+if not End:
+  NextPlacement3 = input("Choose your third placement Player Two ")
+  intNextPlacement3 = int(NextPlacement3)
+  if intNextPlacement3 != intNextPlacement:
+   if intNextPlacement3 != intPlacement:
+     if intNextPlacement3 != intPlacement2:
+      if intNextPlacement3 != intNextPlacement2:
+       if intNextPlacement3 != intPlacement3:
+        OPlacement(intNextPlacement3)
+        EndConditionsO()
+       else:
+        print("Inavlid input. You can not place a piece there")
+      else:
+       print("Inavlid input. You can not place a piece there")
+     else: 
+      print("Inavlid input. You can not place a piece there")
+   else: 
+    print("Inavlid input. You can not place a piece there")
+  else:
+   print("Inavlid input. You can not place a piece there")
