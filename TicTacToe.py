@@ -85,6 +85,10 @@ print("The first player is X and will make the first move.")
 Placement = input("Choose where you will place your first piece ")
 intPlacement = int(Placement)
 def XPlacement(intPlacement):
+ for row in PlacementArray:
+    for value in row:
+        print(value, end=" ")
+    print()
  if intPlacement == 1:
     row_index = 0
     column_index = 0
@@ -171,6 +175,10 @@ print("The next player is O. You can place the next piece based on the board and
 NextPlacement = input("Choose where you will place your first piece ")
 intNextPlacement = int(NextPlacement)
 def OPlacement(intNextPlacement):
+  for row in PlacementArray:
+    for value in row:
+        print(value, end=" ")
+    print()
   if intNextPlacement == 1:
     row_index = 0
     column_index = 0
