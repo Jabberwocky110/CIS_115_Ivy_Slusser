@@ -314,3 +314,83 @@ if not End:
     print("Inavlid input. You can not place a piece there")
   else:
    print("Inavlid input. You can not place a piece there")
+if not End:
+  Placement4 = input("Choose your fourth Placement, Player One ")
+  intPlacement4 = int(Placement4)
+  if intPlacement4 != intNextPlacement:
+   if intPlacement4 != intPlacement:
+     if intPlacement4 != intPlacement2:
+      if intPlacement4 != intNextPlacement2:
+       if intPlacement4 != intPlacement3:
+        if intPlacement4 != intNextPlacement3:
+         XPlacement(intPlacement4)
+         EndConditionsX()
+        else:
+          print("Inavlid input. You can not place a piece there")
+       else:
+        print("Inavlid input. You can not place a piece there")
+      else:
+       print("Inavlid input. You can not place a piece there")
+     else: 
+      print("Inavlid input. You can not place a piece there")
+   else: 
+    print("Inavlid input. You can not place a piece there")
+  else:
+   print("Inavlid input. You can not place a piece there")
+if not End:
+  NextPlacement4 = input("Choose your fourth Placement, Player Two ")
+  intNextPlacement4 = int(NextPlacement4)
+  if intNextPlacement4 != intNextPlacement:
+   if intNextPlacement4 != intPlacement:
+     if intNextPlacement4 != intPlacement2:
+      if intNextPlacement4 != intNextPlacement2:
+       if intNextPlacement4 != intPlacement3:
+        if intNextPlacement4 != intNextPlacement3:
+         if intNextPlacement != Placement4:
+          OPlacement(intNextPlacement4)
+          EndConditionsO()
+         else:
+           print("Inavlid input. You can not place a piece there")
+        else:
+          print("Inavlid input. You can not place a piece there")
+       else:
+          print("Inavlid input. You can not place a piece there")
+      else:
+        print("Inavlid input. You can not place a piece there")
+     else:
+       print("Inavlid input. You can not place a piece there")
+   else: 
+      print("Inavlid input. You can not place a piece there")
+  else: 
+    print("Inavlid input. You can not place a piece there")
+if not End:
+  Placement5 = input("Choose your last Placement, Player One ")
+  intPlacement5 = int(Placement5)
+  if intPlacement5 != intNextPlacement:
+   if intPlacement5 != intPlacement:
+     if intPlacement5 != intPlacement2:
+      if intPlacement5 != intNextPlacement2:
+       if intPlacement5 != intPlacement3:
+        if intPlacement5 != intNextPlacement3:
+         if intPlacement5 != intNextPlacement4:
+           if Placement5 != Placement4:
+            XPlacement(intPlacement5)
+            EndConditionsX()
+           else:
+             print("Inavlid input. You can not place a piece there")
+         else:
+           print("Inavlid input. You can not place a piece there")
+        else:
+          print("Inavlid input. You can not place a piece there")
+       else:
+          print("Inavlid input. You can not place a piece there")
+      else:
+        print("Inavlid input. You can not place a piece there")
+     else:
+       print("Inavlid input. You can not place a piece there")
+   else: 
+      print("Inavlid input. You can not place a piece there")
+  else: 
+    print("Inavlid input. You can not place a piece there")
+if not End:
+  print("The Game is a draw!")
