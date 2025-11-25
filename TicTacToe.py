@@ -114,7 +114,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 2:
+  elif intNextPlacement == 2:
    row_index = 0
    column_index = 1
    TicTacToeArray[row_index][column_index] = "O"
@@ -123,7 +123,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 3:
+  elif intNextPlacement == 3:
    row_index = 0
    column_index = 2
    TicTacToeArray[row_index][column_index] = "O"
@@ -132,7 +132,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 4:
+  elif intNextPlacement == 4:
    row_index = 1
    column_index = 0
    TicTacToeArray[row_index][column_index] = "O"
@@ -141,7 +141,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 5:
+  elif intNextPlacement == 5:
    row_index = 1
    column_index = 1
    TicTacToeArray[row_index][column_index] = "O"
@@ -150,7 +150,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 6:
+  elif intNextPlacement == 6:
    row_index = 1
    column_index = 2
    TicTacToeArray[row_index][column_index] = "O"
@@ -159,7 +159,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 7:
+  elif intNextPlacement == 7:
    row_index = 2
    column_index = 0
    TicTacToeArray[row_index][column_index] = "O"
@@ -168,7 +168,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 8:
+  elif intNextPlacement == 8:
    row_index = 2
    column_index = 1
    TicTacToeArray[row_index][column_index] = "O"
@@ -177,7 +177,7 @@ def OPlacement():
       for value in row:
         print(value, end=" ")
       print()
- elif intNextPlacement == 9:
+  elif intNextPlacement == 9:
    row_index = 2
    column_index = 2
    TicTacToeArray[row_index][column_index] = "O"
