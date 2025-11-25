@@ -239,3 +239,15 @@ for index, values in enumerate(TicTacToeArray):
          elif all(sublist[2] == "X" for sublist in TicTacToeArray):
           print("Player One wins!")
           break
+    value1 = TicTacToeArray[0][0]
+    value2 = TicTacToeArray[1][1]
+    value3 = TicTacToeArray[2][2]
+    if value1 == "X" and value2 == "X" and value3 == "X":
+      print("Player One wins!")
+      break
+    value4 = TicTacToeArray[0][2]
+    value5 = TicTacToeArray[1][1]
+    value6 = TicTacToeArray[2][0]
+    if value4 == "X" and value5 == "X" and value6 == "X":
+      print("Player One wins!")
+      break
