@@ -264,7 +264,9 @@ def OPlacement(intNextPlacement):
 if intNextPlacement != intPlacement:
   OPlacement(intNextPlacement)
 else:
-  print("Invalid input. A piece has already been placed there.")
+  while intNextPlacement == intPlacement:
+   print("Invalid input. A piece has already been placed there.")
+   NextPlacement = input("Reenter where you will put your piece")
 Placement2 = input("Choose where you will place your second piece ")
 intPlacement2 = int(Placement2)
 if NextPlacement != intPlacement:
