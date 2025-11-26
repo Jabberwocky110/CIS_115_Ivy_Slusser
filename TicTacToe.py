@@ -1,3 +1,4 @@
+#This code enables two users to play a game of TicTacToe.
 End = False
 def EndConditionsX():
  global End
