@@ -1,16 +1,25 @@
 #This code enables two users to play a game of TicTacToe.
+#Create a variable to end the game.
 End = False
+#This function determines whether the end conditions have been met for the first player.
 def EndConditionsX():
+ #The ending variable has to be global.
  global End
+ #The indexs with X in the array determine whether the game has been ended.
  for index, values in enumerate(TicTacToeArray):
+    #This determines if there is an X on every row.
     if values[0] == "X" and values[1] == "X" and values[2] == "X":
       print("Player One wins!")
+      #Here, the game is ended.
       End = True
     else:
+         #These if statements determine if there is an X on every column with the same index in each list.
          if all(sublist[0] == "X" for sublist in TicTacToeArray):
           print("Player One wins!")
+          #The game is ended, and Player One wins is only printed once.
           End = True
           break
+         #This determines if the middle column is all X.
          elif all(sublist[1] == "X" for sublist in TicTacToeArray):
           print("Player One wins!")
           End = True
@@ -19,30 +28,41 @@ def EndConditionsX():
           print("Player One wins!")
           End = True
           break
+    #Values are created for the indexs diagonal to each other.
     value1 = TicTacToeArray[0][0]
     value2 = TicTacToeArray[1][1]
     value3 = TicTacToeArray[2][2]
+    #When the diagonal indexs are all X, the game is ended, and Player One wins.
     if value1 == "X" and value2 == "X" and value3 == "X":
       print("Player One wins!")
       End = True
       break
+    #Values are created for indexs that are diagonal the other way.
     value4 = TicTacToeArray[0][2]
     value5 = TicTacToeArray[1][1]
     value6 = TicTacToeArray[2][0]
+    #When these specific indexs are all X, Player One wins.
     if value4 == "X" and value5 == "X" and value6 == "X":
       print("Player One wins!")
       End = True
       break
+#The same end conditions are true for player two, and another function is created.
 def EndConditionsO():
+  #The ending variable must be global here too.
   global End
+  #The indexs are enumerated in the 2 dimensional array.
   for index, values in enumerate(TicTacToeArray):
+    #If all the values in a row are O, Player Two wins.
     if values[0] == "O" and values[1] == "O" and values[2] == "O":
       print("Player Two wins!")
+      #The game is ended.
       End = True
     else:
+         #The code checks if all the values in each column are O.
          if all(sublist[0] == "O" for sublist in TicTacToeArray):
           print("Player Two wins!")
           End = True
+          #The break prevents the loop from preventing three times.
           break
          elif all(sublist[1] == "O" for sublist in TicTacToeArray):
           print("Player Two wins!")
@@ -52,6 +72,7 @@ def EndConditionsO():
           print("Player Two wins!")
           End = True
           break
+    #Values are set for the diagonal indexs again within the function.
     value1 = TicTacToeArray[0][0]
     value2 = TicTacToeArray[1][1]
     value3 = TicTacToeArray[2][2]
