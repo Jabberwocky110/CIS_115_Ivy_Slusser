@@ -76,10 +76,12 @@ def EndConditionsO():
     value1 = TicTacToeArray[0][0]
     value2 = TicTacToeArray[1][1]
     value3 = TicTacToeArray[2][2]
+    #When the diagonal indexs are all O, Player Two wins.
     if value1 == "O" and value2 == "O" and value3 == "O":
       print("Player Two wins!")
       End = True
       break
+    #The same is true for diagonals in both directions.
     value4 = TicTacToeArray[0][2]
     value5 = TicTacToeArray[1][1]
     value6 = TicTacToeArray[2][0]
@@ -87,6 +89,7 @@ def EndConditionsO():
       print("Player Two wins!")
       End = True
       break
+#Here is two 2 dimensional board before any pieces are added.
 TicTacToeArray = [[0, 0, 0],
                   [0, 0, 0],
                   [0, 0, 0]]
@@ -192,10 +195,6 @@ def XPlacement(intPlacement):
       for value in row:
         print(value, end=" ")
       print()
-XPlacement(intPlacement)
-print("The next player is O. You can place the next piece based on the board and placement board. Type a number to place your first piece") 
-NextPlacement = input("Choose where you will place your first piece ")
-intNextPlacement = int(NextPlacement)
 def OPlacement(intNextPlacement):
   for row in PlacementArray:
     for value in row:
@@ -282,12 +281,18 @@ def OPlacement(intNextPlacement):
       for value in row:
         print(value, end=" ")
       print()
+XPlacement(intPlacement)
+print("The next player is O. You can place the next piece based on the board and placement board. Type a number to place your first piece") 
+NextPlacement = input("Choose where you will place your first piece ")
+intNextPlacement = int(NextPlacement)
 if intNextPlacement != intPlacement:
   OPlacement(intNextPlacement)
 else:
   while intNextPlacement == intPlacement:
    print("Invalid input. A piece has already been placed there.")
    NextPlacement = input("Reenter where you will put your piece")
+   intNextPlacement = int(NextPlacement)
+  OPlacement(intNextPlacement)
 Placement2 = input("Choose where you will place your second piece ")
 intPlacement2 = int(Placement2)
 if NextPlacement != intPlacement:
