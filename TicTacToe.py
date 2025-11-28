@@ -293,7 +293,7 @@ else:
    NextPlacement = input("Reenter where you will put your piece")
    intNextPlacement = int(NextPlacement)
   OPlacement(intNextPlacement)
-Placement2 = input("Choose where you will place your second piece ")
+Placement2 = input("Player One, choose where you will place your second piece ")
 intPlacement2 = int(Placement2)
 if NextPlacement != intPlacement:
   if intPlacement2 != intNextPlacement:
