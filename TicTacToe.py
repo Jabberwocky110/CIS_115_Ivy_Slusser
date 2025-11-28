@@ -213,11 +213,14 @@ def XPlacement(intPlacement):
       for value in row:
         print(value, end=" ")
       print()
+#A function is created to place the O pieces.
 def OPlacement(intNextPlacement):
+    #The placement array is printed each time the function is called.
   for row in PlacementArray:
     for value in row:
         print(value, end=" ")
     print()
+  #The function works in the same way aa the X Placement function, but with O instead of X.
   if intNextPlacement == 1:
     row_index = 0
     column_index = 0
@@ -437,17 +440,41 @@ if not End:
          XPlacement(intPlacement4)
          EndConditionsX()
         else:
+         while intPlacement4 == intNextPlacement3:
           print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+         XPlacement(intPlacement4)
        else:
-        print("Inavlid input. You can not place a piece there")
+        while intPlacement4 == intPlacement3:
+          print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+        XPlacement(intPlacement4)
       else:
-       print("Inavlid input. You can not place a piece there")
+       while intPlacement4 == intNextPlacement2:
+          print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+       XPlacement(intPlacement4)
      else: 
-      print("Inavlid input. You can not place a piece there")
+      while intPlacement4 == intPlacement2:
+          print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+      XPlacement(intPlacement4)
    else: 
-    print("Inavlid input. You can not place a piece there")
+    while intPlacement4 == intPlacement:
+          print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+    XPlacement(intPlacement4)
   else:
-   print("Inavlid input. You can not place a piece there")
+   while intPlacement4 == intNextPlacement:
+          print("Inavlid input. You can not place a piece there")
+          Placement4 = input("Reenter where you will put your piece ")
+          intPlacement4 = int(Placement4)
+   XPlacement(intPlacement4)
 if not End:
   NextPlacement4 = input("Choose your fourth Placement, Player Two ")
   intNextPlacement4 = int(NextPlacement4)
