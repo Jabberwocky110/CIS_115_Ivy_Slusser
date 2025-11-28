@@ -102,14 +102,17 @@ for row in TicTacToeArray:
     print()
 #Instructions are given for the user here.
 print("This is the board. No pieces have been placed yet.")
+#An array with numbers is given for the user for they know where to place the pieces.
 PlacementArray = [[1, 2, 3],
                   [4, 5, 6],
                   [7, 8, 9]]
+#The Placement array is printed here in the same manner as the board.
 for row in PlacementArray:
     for value in row:
         print(value, end=" ")
     print()
-print("These are the locations where you can place your piece. Type in a number to place a piece where that number is.")
+#More instructions are given for the user.
+print("These are the numbered locations where you can place your piece. Type in a number to place a piece where that number is.")
 print("The first player is X and will make the first move.")
 Placement = input("Choose where you will place your first piece ")
 intPlacement = int(Placement)
@@ -299,13 +302,21 @@ else:
   OPlacement(intNextPlacement)
 Placement2 = input("Player One, choose where you will place your second piece ")
 intPlacement2 = int(Placement2)
-if NextPlacement != intPlacement:
+if intPlacement2 != intPlacement:
   if intPlacement2 != intNextPlacement:
     XPlacement(intPlacement2)
   else:
-    print("Invalid input that place on the board is already taken")
+    while intPlacement2 == intNextPlacement:
+     print("Invalid input that place on the board is already taken")
+     Placement2 = input("Reenter where you will put your piece")
+     intPlacement2 = int(Placement2)
+    XPlacement(intPlacement2)
 else:
-  print("Invalid Input. That place on the board is already taken")
+ while intPlacement2 == intPlacement:
+     print("Invalid input that place on the board is already taken")
+     Placement2 = input("Reenter where you will put your piece")
+     intPlacement2 = int(Placement2)
+ XPlacement(intPlacement2)
 print("Player two, you can now place your second piece ")
 NextPlacement2 = input("Choose where you will place your second piece ")
 intNextPlacement2 = int(NextPlacement2)
