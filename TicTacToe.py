@@ -118,25 +118,34 @@ print("The first player is X and will make the first move.")
 Placement = input("Choose where you will place your first piece ")
 #The input is converted to an integer so it can be compared.
 intPlacement = int(Placement)
+#A function is created to place the X pieces.
 def XPlacement(intPlacement):
+ #The placement array is printed each time the user places a piece as a visual representation of where they can place pieces.
  for row in PlacementArray:
     for value in row:
         print(value, end=" ")
     print()
+#Here is where a piece can be placed in the upper left corner.
  if intPlacement == 1:
+    #A variable is created for the index for the row and column.
     row_index = 0
     column_index = 0
+    #Within the array, X is placed with the indexs of the row and column.
     TicTacToeArray[row_index][column_index] = "X"
+    #The board is reprinted.
     print("The board is now:")
     for row in TicTacToeArray:
       for value in row:
         print(value, end=" ")
       print()
+ #For each placement number, the indexs change, and a placement is created for each index with X.
  elif intPlacement == 2:
    row_index = 0
+   #The column index is the first to change with a different placement.
    column_index = 1
    TicTacToeArray[row_index][column_index] = "X"
    print("The board is now:")
+   #The board is printed for every placement.
    for row in TicTacToeArray:
       for value in row:
         print(value, end=" ")
@@ -387,15 +396,35 @@ if not End:
         OPlacement(intNextPlacement3)
         EndConditionsO()
        else:
-        print("Inavlid input. You can not place a piece there")
+        while intNextPlacement3 == intPlacement3:
+         print("Inavlid input. You can not place a piece there")
+         NextPlacement3 = input("Reenter where you will put your piece ")
+         intNextPlacement3 = int(NextPlacement3)
+        OPlacement(intNextPlacement3)
       else:
-       print("Inavlid input. You can not place a piece there")
+       while intNextPlacement3 == intNextPlacement2:
+         print("Inavlid input. You can not place a piece there")
+         NextPlacement3 = input("Reenter where you will put your piece ")
+         intNextPlacement3 = int(NextPlacement3)
+       OPlacement(intNextPlacement3)
      else: 
-      print("Inavlid input. You can not place a piece there")
+      while intNextPlacement3 == intPlacement2:
+         print("Inavlid input. You can not place a piece there")
+         NextPlacement3 = input("Reenter where you will put your piece ")
+         intNextPlacement3 = int(NextPlacement3)
+      OPlacement(intNextPlacement3)
    else: 
-    print("Inavlid input. You can not place a piece there")
+    while intNextPlacement3 == intPlacement:
+         print("Inavlid input. You can not place a piece there")
+         NextPlacement3 = input("Reenter where you will put your piece ")
+         intNextPlacement3 = int(NextPlacement3)
+    OPlacement(intNextPlacement3)
   else:
-   print("Inavlid input. You can not place a piece there")
+   while intNextPlacement3 == intPlacement3:
+         print("Inavlid input. You can not place a piece there")
+         NextPlacement3 = input("Reenter where you will put your piece ")
+         intNextPlacement3 = int(NextPlacement3)
+   OPlacement(intNextPlacement3)
 if not End:
   Placement4 = input("Choose your fourth Placement, Player One ")
   intPlacement4 = int(Placement4)
