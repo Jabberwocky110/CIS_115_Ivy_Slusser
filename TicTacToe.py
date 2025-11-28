@@ -326,34 +326,43 @@ intPlacement2 = int(Placement2)
 #The places where the user cannot place their piece increase.
 if intPlacement2 != intPlacement:
   if intPlacement2 != intNextPlacement:
+    #When the place is not taken, the user can place their piece.
     XPlacement(intPlacement2)
   else:
+    #The user has to replace their piece, but cannot overwrite the other player's piece.
     while intPlacement2 == intNextPlacement:
      print("Invalid input that place on the board is already taken")
      Placement2 = input("Reenter where you will put your piece")
      intPlacement2 = int(Placement2)
+     #As long as the user doesn't overwrite another player, they can place their piece in another location.
     if intPlacement2 != intPlacement:
      XPlacement(intPlacement2)
     else:
+      #If the user tries to overwrite the other player or put their piece in the same location, they have to place their piece in another location.
       while intPlacement2 == intPlacement:
        print("Invalid input again!")
        Placement2 = input("Reenter where you will put your piece")
        intPlacement2 = int(Placement2)
       XPlacement(intPlacement2)
 else:
+ #The user has to replace their piece, but cannot overwrite the other player's piece.
  while intPlacement2 == intPlacement:
      print("Invalid input that place on the board is already taken")
      Placement2 = input("Reenter where you will put your piece")
      intPlacement2 = int(Placement2)
+ #As long as the user doesn't overwrite another player, they can place their piece in another location.
  if intPlacement2 != intNextPlacement:
      XPlacement(intPlacement2)
  else:
+    #If the user tries to overwrite the other player or put their piece in the same location, they have to place their piece in another location.
       while intPlacement2 == intNextPlacement:
        print("Invalid input again!")
        Placement2 = input("Reenter where you will put your piece")
        intPlacement2 = int(Placement2)
       XPlacement(intPlacement2)
+#The second player can now place their second piece.
 print("Player two, you can now place your second piece ")
+#The variable includes next, denoting it to O.
 NextPlacement2 = input("Choose where you will place your second piece ")
 intNextPlacement2 = int(NextPlacement2)
 if intNextPlacement2 != intNextPlacement:
@@ -365,7 +374,40 @@ if intNextPlacement2 != intNextPlacement:
       print("Invalid input that place on the board is already taken")
       NextPlacement2 = input("Reenter where you will put your piece ")
       intNextPlacement2 = int(NextPlacement2)
-     OPlacement(intNextPlacement2)
+     if intNextPlacement2 != intNextPlacement:
+      if intNextPlacement2 != intPlacement:
+       OPlacement(intNextPlacement2)
+      else:
+        while intNextPlacement2 == intPlacement:
+         print("Invalid input that place on the board is already taken")
+         NextPlacement2 = input("Reenter where you will put your piece ")
+         intNextPlacement2 = int(NextPlacement2)
+        if intNextPlacement2 != intNextPlacement:
+         OPlacement(intNextPlacement2)
+        else:
+         while intNextPlacement2 == intNextPlacement:
+          print("Invalid input that place on the board is already taken")
+          NextPlacement2 = input("Reenter where you will put your piece ")
+          intNextPlacement2 = int(NextPlacement2)
+         OPlacement(intNextPlacement2)  
+     else:
+      while intNextPlacement2 == intNextPlacement:
+          print("Invalid input that place on the board is already taken")
+          NextPlacement2 = input("Reenter where you will put your piece ")
+          intNextPlacement2 = int(NextPlacement2)
+      if intNextPlacement2 != intPlacement:
+       if intNextPlacement2 != intPlacement2:
+        OPlacement(intNextPlacement2) 
+       else:
+        while intNextPlacement2 == intPlacement2:
+         print("Invalid input that place on the board is already taken")
+         NextPlacement2 = input("Reenter where you will put your piece ")
+         intNextPlacement2 = int(NextPlacement2)
+      else:
+        while intNextPlacement2 == intPlacement:
+         print("Invalid input that place on the board is already taken")
+         NextPlacement2 = input("Reenter where you will put your piece ")
+         intNextPlacement2 = int(NextPlacement2)
  else: 
   while intNextPlacement2 == intPlacement:
       print("Invalid input that place on the board is already taken")
