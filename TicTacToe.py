@@ -89,14 +89,18 @@ def EndConditionsO():
       print("Player Two wins!")
       End = True
       break
-#Here is two 2 dimensional board before any pieces are added.
+#Here is two 2 dimensional board before any pieces are added. There are three sublists within a list.
 TicTacToeArray = [[0, 0, 0],
                   [0, 0, 0],
                   [0, 0, 0]]
+#To print the array, a nested loop prints the values in each row seperately. 
 for row in TicTacToeArray:
     for value in row:
+        #There is a space after each value.
         print(value, end=" ")
+    #The empty print statement ensures that each row is on a seperate line.
     print()
+#Instructions are given for the user here.
 print("This is the board. No pieces have been placed yet.")
 PlacementArray = [[1, 2, 3],
                   [4, 5, 6],
