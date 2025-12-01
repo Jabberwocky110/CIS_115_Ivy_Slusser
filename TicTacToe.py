@@ -329,38 +329,25 @@ if intPlacement2 != intPlacement:
     #When the place is not taken, the user can place their piece.
     XPlacement(intPlacement2)
   else:
-    #The user has to replace their piece, but cannot overwrite the other player's piece.
-    while intPlacement2 == intNextPlacement:
-     print("Invalid input that place on the board is already taken")
-     Placement2 = input("Reenter where you will put your piece")
-     intPlacement2 = int(Placement2)
-     #As long as the user doesn't overwrite another player, they can place their piece in another location.
+    #Prevented by the loop, the user cannot place their piece in either location that has already been taken.
+    while intPlacement2 == intPlacement or intPlacement2 == intNextPlacement:
+      #The code prints invalid input until they choose a new piece location.
+      print("Invalid input!")
+      Placement2 = input("Reenter your piece location!")
+      intPlacement2 = int(Placement2)
+    #The same conditions in the beginning are used for the user to place their piece.
     if intPlacement2 != intPlacement:
-     XPlacement(intPlacement2)
-    else:
-      #If the user tries to overwrite the other player or put their piece in the same location, they have to place their piece in another location.
-      while intPlacement2 == intPlacement:
-       print("Invalid input again!")
-       Placement2 = input("Reenter where you will put your piece")
-       intPlacement2 = int(Placement2)
-      XPlacement(intPlacement2)
+      if intPlacement2 != intNextPlacement:
+        XPlacement(intPlacement2)
 else:
- #The user has to replace their piece, but cannot overwrite the other player's piece.
- while intPlacement2 == intPlacement:
-     print("Invalid input that place on the board is already taken")
-     Placement2 = input("Reenter where you will put your piece")
-     intPlacement2 = int(Placement2)
- #As long as the user doesn't overwrite another player, they can place their piece in another location.
- if intPlacement2 != intNextPlacement:
-     XPlacement(intPlacement2)
- else:
-    #If the user tries to overwrite the other player or put their piece in the same location, they have to place their piece in another location.
-      while intPlacement2 == intNextPlacement:
-       print("Invalid input again!")
-       Placement2 = input("Reenter where you will put your piece")
-       intPlacement2 = int(Placement2)
-      if intPlacement2 != intPlacement:
-       XPlacement(intPlacement2)
+ #In both circumstances, the user must choose a different location for their piece.
+ while intPlacement2 == intPlacement or intPlacement2 == intNextPlacement:
+      print("Invalid input!")
+      Placement2 = input("Reenter your piece location!")
+      intPlacement2 = int(Placement2)
+ if intPlacement2 != intPlacement:
+    if intPlacement2 != intNextPlacement:
+        XPlacement(intPlacement2)
 #The second player can now place their second piece.
 print("Player two, you can now place your second piece ")
 #The variable includes next, denoting it to O.
