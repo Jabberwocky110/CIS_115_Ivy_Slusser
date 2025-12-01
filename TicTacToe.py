@@ -374,40 +374,6 @@ if intNextPlacement2 != intNextPlacement:
       print("Invalid input that place on the board is already taken")
       NextPlacement2 = input("Reenter where you will put your piece ")
       intNextPlacement2 = int(NextPlacement2)
-     if intNextPlacement2 != intNextPlacement:
-      if intNextPlacement2 != intPlacement:
-       OPlacement(intNextPlacement2)
-      else:
-        while intNextPlacement2 == intPlacement:
-         print("Invalid input that place on the board is already taken")
-         NextPlacement2 = input("Reenter where you will put your piece ")
-         intNextPlacement2 = int(NextPlacement2)
-        if intNextPlacement2 != intNextPlacement:
-         OPlacement(intNextPlacement2)
-        else:
-         while intNextPlacement2 == intNextPlacement:
-          print("Invalid input that place on the board is already taken")
-          NextPlacement2 = input("Reenter where you will put your piece ")
-          intNextPlacement2 = int(NextPlacement2)
-         OPlacement(intNextPlacement2)  
-     else:
-      while intNextPlacement2 == intNextPlacement:
-          print("Invalid input that place on the board is already taken")
-          NextPlacement2 = input("Reenter where you will put your piece ")
-          intNextPlacement2 = int(NextPlacement2)
-      if intNextPlacement2 != intPlacement:
-       if intNextPlacement2 != intPlacement2:
-        OPlacement(intNextPlacement2) 
-       else:
-        while intNextPlacement2 == intPlacement2:
-         print("Invalid input that place on the board is already taken")
-         NextPlacement2 = input("Reenter where you will put your piece ")
-         intNextPlacement2 = int(NextPlacement2)
-      else:
-        while intNextPlacement2 == intPlacement:
-         print("Invalid input that place on the board is already taken")
-         NextPlacement2 = input("Reenter where you will put your piece ")
-         intNextPlacement2 = int(NextPlacement2)
  else: 
   while intNextPlacement2 == intPlacement:
       print("Invalid input that place on the board is already taken")
