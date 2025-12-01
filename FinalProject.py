@@ -308,7 +308,7 @@ else:
     index = index + 1
     #The spacing of the total subtitle varies for different items in the cart.
     if index == ProductNumber1:
-     print(f"SKU     Quantity   Price     Description{values}           Total")
+     print(f"SKU     Quantity   Price     Description{values}         Total")
      print("*" * 77)
    #The catalog values are granted indexs and taked from the catalog dictionary without the keys.
    for index, values in enumerate(Catalog.values()):

@@ -359,7 +359,8 @@ else:
        print("Invalid input again!")
        Placement2 = input("Reenter where you will put your piece")
        intPlacement2 = int(Placement2)
-      XPlacement(intPlacement2)
+      if intPlacement2 != intPlacement:
+       XPlacement(intPlacement2)
 #The second player can now place their second piece.
 print("Player two, you can now place your second piece ")
 #The variable includes next, denoting it to O.
