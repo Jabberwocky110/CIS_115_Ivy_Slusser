@@ -455,36 +455,56 @@ else:
 if not End:
   NextPlacement3 = input("Choose your third placement Player Two ")
   intNextPlacement3 = int(NextPlacement3)
-  if intNextPlacement3 != intNextPlacement and intNextPlacement != intPlacement:
+  if intNextPlacement3 != intNextPlacement and intNextPlacement3 != intPlacement:
      if intNextPlacement3 != intPlacement2:
       if intNextPlacement3 != intNextPlacement2:
        if intNextPlacement3 != intPlacement3:
         OPlacement(intNextPlacement3)
         EndConditionsO()
        else:
-        while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement:
+        while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
-        OPlacement(intNextPlacement3)
+        if intNextPlacement3 != intNextPlacement and intNextPlacement3 != intPlacement:
+         if intNextPlacement3 != intPlacement2:
+          if intNextPlacement3 != intNextPlacement2:
+           if intNextPlacement3 != intPlacement3:
+            OPlacement(intNextPlacement3)
+            EndConditionsO()
       else:
-       while intNextPlacement3 == intNextPlacement2:
+       while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
-       OPlacement(intNextPlacement3)
+       if intNextPlacement3 != intNextPlacement and intNextPlacement3 != intPlacement:
+         if intNextPlacement3 != intPlacement2:
+          if intNextPlacement3 != intNextPlacement2:
+           if intNextPlacement3 != intPlacement3:
+            OPlacement(intNextPlacement3)
+            EndConditionsO()
      else: 
-      while intNextPlacement3 == intPlacement2:
+      while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
-      OPlacement(intNextPlacement3)
+      if intNextPlacement3 != intNextPlacement and intNextPlacement3 != intPlacement:
+         if intNextPlacement3 != intPlacement2:
+          if intNextPlacement3 != intNextPlacement2:
+           if intNextPlacement3 != intPlacement3:
+            OPlacement(intNextPlacement3)
+            EndConditionsO()
   else:
-   while intNextPlacement3 == intPlacement3:
+   while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
-   OPlacement(intNextPlacement3)
+   if intNextPlacement3 != intNextPlacement and intNextPlacement3 != intPlacement:
+         if intNextPlacement3 != intPlacement2:
+          if intNextPlacement3 != intNextPlacement2:
+           if intNextPlacement3 != intPlacement3:
+            OPlacement(intNextPlacement3)
+            EndConditionsO()
 if not End:
   Placement4 = input("Choose your fourth Placement, Player One ")
   intPlacement4 = int(Placement4)
