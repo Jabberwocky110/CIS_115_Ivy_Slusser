@@ -462,7 +462,7 @@ if not End:
         OPlacement(intNextPlacement3)
         EndConditionsO()
        else:
-        while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
+        while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement3 == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
@@ -473,7 +473,7 @@ if not End:
             OPlacement(intNextPlacement3)
             EndConditionsO()
       else:
-       while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
+       while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement3 == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
@@ -484,7 +484,7 @@ if not End:
             OPlacement(intNextPlacement3)
             EndConditionsO()
      else: 
-      while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
+      while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement3 == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
@@ -495,7 +495,7 @@ if not End:
             OPlacement(intNextPlacement3)
             EndConditionsO()
   else:
-   while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
+   while intNextPlacement3 == intPlacement3 or intNextPlacement3 == intNextPlacement or intNextPlacement3 == intPlacement2 or intNextPlacement3 == intNextPlacement2 or intNextPlacement3 == intPlacement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
          intNextPlacement3 = int(NextPlacement3)
