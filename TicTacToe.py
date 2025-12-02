@@ -570,7 +570,7 @@ if not End:
   if intNextPlacement4 != intNextPlacement and intNextPlacement4 != intPlacement and intNextPlacement4 != intPlacement2 and intNextPlacement4 != intNextPlacement2:
        if intNextPlacement4 != intPlacement3:
         if intNextPlacement4 != intNextPlacement3:
-         if intNextPlacement != Placement4:
+         if intNextPlacement4 != Placement4:
           OPlacement(intNextPlacement4)
           EndConditionsO()
          else:
@@ -581,7 +581,7 @@ if not End:
            if intNextPlacement4 != intNextPlacement and intNextPlacement4 != intPlacement and intNextPlacement4 != intPlacement2 and intNextPlacement4 != intNextPlacement2:
             if intNextPlacement4 != intPlacement3:
              if intNextPlacement4 != intNextPlacement3:
-              if intNextPlacement != Placement4:
+              if intNextPlacement4 != Placement4:
                OPlacement(intNextPlacement4)
                EndConditionsO()
         else:
@@ -592,7 +592,7 @@ if not End:
          if intNextPlacement4 != intNextPlacement and intNextPlacement4 != intPlacement and intNextPlacement4 != intPlacement2 and intNextPlacement4 != intNextPlacement2:
             if intNextPlacement4 != intPlacement3:
              if intNextPlacement4 != intNextPlacement3:
-              if intNextPlacement != Placement4:
+              if intNextPlacement4 != Placement4:
                OPlacement(intNextPlacement4)
                EndConditionsO()
        else:
@@ -603,7 +603,7 @@ if not End:
          if intNextPlacement4 != intNextPlacement and intNextPlacement4 != intPlacement and intNextPlacement4 != intPlacement2 and intNextPlacement4 != intNextPlacement2:
             if intNextPlacement4 != intPlacement3:
              if intNextPlacement4 != intNextPlacement3:
-              if intNextPlacement != Placement4:
+              if intNextPlacement4 != Placement4:
                OPlacement(intNextPlacement4)
                EndConditionsO()
   else: 
@@ -614,7 +614,7 @@ if not End:
     if intNextPlacement4 != intNextPlacement and intNextPlacement4 != intPlacement and intNextPlacement4 != intPlacement2 and intNextPlacement4 != intNextPlacement2:
             if intNextPlacement4 != intPlacement3:
              if intNextPlacement4 != intNextPlacement3:
-              if intNextPlacement != Placement4:
+              if intNextPlacement4 != Placement4:
                OPlacement(intNextPlacement4)
                EndConditionsO()
 if not End:
