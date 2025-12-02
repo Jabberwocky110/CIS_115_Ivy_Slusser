@@ -22,6 +22,7 @@ def EndConditionsX():
          #This determines if the middle column is all X.
          elif all(sublist[1] == "X" for sublist in TicTacToeArray):
           print("Player One wins!")
+          #This ensures that the loop only iterates and prints once.
           End = True
           break
          elif all(sublist[2] == "X" for sublist in TicTacToeArray):
