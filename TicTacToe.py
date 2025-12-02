@@ -213,6 +213,8 @@ def XPlacement(intPlacement):
       for value in row:
         print(value, end=" ")
       print()
+ else:
+   print("Invalid input!")
 #A function is created to place the O pieces.
 def OPlacement(intNextPlacement):
     #The placement array is printed each time the function is called.
@@ -302,6 +304,8 @@ def OPlacement(intNextPlacement):
       for value in row:
         print(value, end=" ")
       print()
+  else:
+    print("Invalid input!")
 #The first X piece is placed here.
 XPlacement(intPlacement)
 #Now, the second player can place their first piece.
