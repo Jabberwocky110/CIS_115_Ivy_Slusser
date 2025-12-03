@@ -160,6 +160,7 @@ def XPlacement(Placement):
         print(value, end=" ")
       print()
  elif Placement == "4":
+   #Varibales are assigned to the row and column indexes.
    row_index = 1
    column_index = 0
    TicTacToeArray[row_index][column_index] = "X"
@@ -325,27 +326,16 @@ else:
 #Here, Player One can place their second piece.
 Placement2 = input("Player One, choose where you will place your second piece ")
 #The places where the user cannot place their piece increase.
-if Placement2 != Placement:
-  if Placement2 != NextPlacement:
+if Placement2 != Placement and Placement2 != NextPlacement:
     #When the place is not taken, the user can place their piece.
     XPlacement(Placement2)
-  else:
-    #Prevented by the loop, the user cannot place their piece in either location that has already been taken.
-    while Placement2 == Placement or Placement2 == NextPlacement:
-      #The code prints invalid input until they choose a new piece location.
-      print("Invalid input!")
-      Placement2 = input("Reenter your piece location!")
-    #The same conditions in the beginning are used for the user to place their piece.
-    if Placement2 != Placement:
-      if Placement2 != NextPlacement:
-        XPlacement(Placement2)
 else:
- #In both circumstances, the user must choose a different location for their piece.
+ #Prevented by the loop, the user cannot place their piece in either location that has already been taken.
  while Placement2 == Placement or Placement2 == NextPlacement:
       print("Invalid input!")
       Placement2 = input("Reenter your piece location! ")
- if Placement2 != Placement:
-    if Placement2 != NextPlacement:
+ #The same conditions in the beginning are used for the user to place their piece.
+ if Placement2 != Placement and Placement2 != NextPlacement:
         XPlacement(Placement2)
 #The second player can now place their second piece.
 print("Player two, you can now place your second piece ")
