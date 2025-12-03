@@ -154,6 +154,7 @@ def XPlacement(Placement):
    column_index = 2
    TicTacToeArray[row_index][column_index] = "X"
    print("The board is now:")
+   #The board is printed.
    for row in TicTacToeArray:
       for value in row:
         print(value, end=" ")
