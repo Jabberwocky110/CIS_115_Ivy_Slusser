@@ -465,7 +465,6 @@ if not End:
        while NextPlacement3 == Placement3 or NextPlacement3 == NextPlacement or NextPlacement3 == Placement2 or NextPlacement3 == NextPlacement2 or NextPlacement3 == Placement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
-         NextPlacement3 = int(NextPlacement3)
        if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
          if NextPlacement3 != Placement2:
           if NextPlacement3 != NextPlacement2:
@@ -517,7 +516,6 @@ if not End:
         while Placement4 == NextPlacement3 or Placement4 == Placement3 or Placement4 == NextPlacement2 or Placement4 == Placement2 or Placement4 == NextPlacement or Placement4 == Placement:
           print("Inavlid input. You can not place a piece there")
           Placement4 = input("Reenter where you will put your piece ")
-          Placement4 = int(Placement4)
         if Placement4 != NextPlacement and Placement4 != Placement:
           if Placement4 != Placement2 and Placement4 != NextPlacement2:
            if Placement4 != Placement3:
