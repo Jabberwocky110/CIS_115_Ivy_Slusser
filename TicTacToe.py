@@ -364,62 +364,23 @@ else:
         print("Inavlid input. You can not place a piece there")
         Placement3 = input("Reenter where you will put your piece ")
         #Players are prevented from replacing the other players pieces.
- if Placement3 != NextPlacement:
-         if Placement3 != Placement:
-          if Placement3 != Placement2:
-           if Placement3 != NextPlacement2:
+ if Placement3 != NextPlacement and Placement3 != Placement and Placement3 != Placement2 and Placement3 != NextPlacement2:
              XPlacement(Placement3)
                #The end conditions function is called for the first time to check if X wins the game.
              EndConditionsX()
 #The code only continues if the game hasn't been ended.
 if not End:
   NextPlacement3 = input("Choose your third placement Player Two ")
-  #Some of the conditions are combined.
-  if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
-     if NextPlacement3 != Placement2:
-      if NextPlacement3 != NextPlacement2:
-       if NextPlacement3 != Placement3:
+  #The conditions are combined into one statement.
+  if NextPlacement3 != NextPlacement and NextPlacement3 != Placement and NextPlacement3 != Placement2 and NextPlacement3 != NextPlacement2 and NextPlacement3 != Placement3:
         OPlacement(NextPlacement3)
         EndConditionsO()
-       else:
-        #Numerous conditions have to be met before the piece can be placed.
-        while NextPlacement3 == Placement3 or NextPlacement3 == NextPlacement or NextPlacement3 == Placement2 or NextPlacement3 == NextPlacement2 or NextPlacement3 == Placement:
-         print("Inavlid input. You can not place a piece there")
-         NextPlacement3 = input("Reenter where you will put your piece ")
-        if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
-         if NextPlacement3 != Placement2:
-          if NextPlacement3 != NextPlacement2:
-           if NextPlacement3 != Placement3:
-            OPlacement(NextPlacement3)
-            EndConditionsO()
-      else:
-       while NextPlacement3 == Placement3 or NextPlacement3 == NextPlacement or NextPlacement3 == Placement2 or NextPlacement3 == NextPlacement2 or NextPlacement3 == Placement:
-         print("Inavlid input. You can not place a piece there")
-         NextPlacement3 = input("Reenter where you will put your piece ")
-       if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
-         if NextPlacement3 != Placement2:
-          if NextPlacement3 != NextPlacement2:
-           if NextPlacement3 != Placement3:
-            OPlacement(NextPlacement3)
-            EndConditionsO()
-     else: 
-      while NextPlacement3 == Placement3 or NextPlacement3 == NextPlacement or NextPlacement3 == Placement2 or NextPlacement3 == NextPlacement2 or NextPlacement3 == Placement:
-         print("Inavlid input. You can not place a piece there")
-         NextPlacement3 = input("Reenter where you will put your piece ")
-      if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
-         if NextPlacement3 != Placement2:
-          if NextPlacement3 != NextPlacement2:
-           if NextPlacement3 != Placement3:
-            OPlacement(NextPlacement3)
-            EndConditionsO()
   else:
+  #Numerous conditions have to be met before the piece can be placed.
    while NextPlacement3 == Placement3 or NextPlacement3 == NextPlacement or NextPlacement3 == Placement2 or NextPlacement3 == NextPlacement2 or NextPlacement3 == Placement:
          print("Inavlid input. You can not place a piece there")
          NextPlacement3 = input("Reenter where you will put your piece ")
-   if NextPlacement3 != NextPlacement and NextPlacement3 != Placement:
-         if NextPlacement3 != Placement2:
-          if NextPlacement3 != NextPlacement2:
-           if NextPlacement3 != Placement3:
+   if NextPlacement3 != NextPlacement and NextPlacement3 != Placement and NextPlacement3 != Placement2 and NextPlacement3 != NextPlacement2 and NextPlacement3 != Placement3:
             #The sixth piece is placed now.
             OPlacement(NextPlacement3)
             EndConditionsO()
