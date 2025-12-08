@@ -1,3 +1,4 @@
+import numpy as np
 code = input("Input the words: ")
 Letter_dictionary = {
 "a":0,
@@ -40,12 +41,12 @@ Chessboard = [[0, 0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0]]
-PossibleInitialletterArray = [["a", "b", "c", "d"], 
+PossibleInitialletterArray = np.array([["a", "b", "c", "d"], 
                               ["e", "f", "g", "h"], 
                               ["i", "j", "k", "l"],
                               ["m", "n", "o", "p"], 
                               ["r", "s", "t", "u"], 
-                              ["v", "w", "x", "y"]]
+                              ["v", "w", "x", "y"]])
 Pawn = "P"
 Rook = "R"
 Knight = "N"
@@ -177,3 +178,17 @@ for rows in InitialChessboard:
         print(value, end = " ")
     print()
 print("Checkmate!")
+chessography_array = np.array([[0, 0, 0, 0, 0, 0, "N", 0],
+                     [0, 0, 0, 0, 0, 0, 0, 0,], 
+                     [0, 0, "K", 0, 0, 0, 0, 0], 
+                     [0, 0, 0, 0, 0, "N", 0, 0],
+                     [0, 0, 0, 0, "K", 0, 0, 0],
+                     [0, 0, 0, 0, 0, 0, 0, 0],
+                     [0, 0, 0, "P", "Q", 0, 0, 0],
+                     [0, 0, "Q", 0, 0, "R", 0, 0]])
+starting_row = 2
+starting_column = 2
+end_row = starting_row + PossibleInitialletterArray.shape[0]
+end_column = starting_column + PossibleInitialletterArray.shape[1]
+chessography_array[starting_row:end_row, starting_column:end_column] = PossibleInitialletterArray
+print(chessography_array)
