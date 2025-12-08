@@ -107,3 +107,45 @@ for rows in InitialChessboard:
     for value in rows:
         print(value, end = " ")
     print()
+print("The pawn moves forward:")
+InitialChessboard[3][3] = 0
+InitialChessboard[2][3] = "P"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Forest:")
+InitialChessboard[2][3] = 0
+InitialChessboard[1][3] = "P"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("White queen flies from the red knight:")
+InitialChessboard[0][5] = 0
+InitialChessboard[0][2] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Check!")
+InitialChessboard[0][6] = 0
+InitialChessboard[1][4] = "N"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The white knight takes the red knight:")
+InitialChessboard[3][5] = 0
+InitialChessboard[1][4] = "N"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The white knight returns:")
+InitialChessboard[1][4] = 0
+InitialChessboard[3][5] = "N"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
