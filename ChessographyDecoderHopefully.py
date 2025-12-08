@@ -32,54 +32,74 @@ for index, value in enumerate(Letter_dictionary.keys()):
     count = code.count(value)
     countList.append(count)
 print(f'{countList}')
-IntialChessboardArrangement = [0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0, 
-                               0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0,
-                               0, 0, 0, 0, 0, 0, 0, 0]
-On = 1
-Off = 0
-PossibleInitialletterArray = ["a", "b", "c", "d", "e", "f",
-                              "g", "h", "i", "j", "k", "l",
-                              "m", "n", "o", "p", "r", "s"
-                              "t", "u", "v", "w", "x", "y"]
+Chessboard = [[0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0]]
+PossibleInitialletterArray = [["a", "b", "c", "d"], 
+                              ["e", "f", "g", "h"], 
+                              ["i", "j", "k", "l"],
+                              ["m", "n", "o", "p"], 
+                              ["r", "s", "t", "u"], 
+                              ["v", "w", "x", "y"]]
 Pawn = "P"
 Rook = "R"
 Knight = "N"
 Bishop = "B"
 Queen = "Q"
 King = "K"
-InitialPawnarray = [  1,
-                   0, 0, 0]
-InitialRookarray = [1, 0, 0, 0, 0, 0, 0, 0,
-                    0, 
-                    0, 
-                    0, 
-                    0, 
-                    0, 
-                    0, 
-                    0]
-InitialKnightarray = [ 1 ,
-                    0  ,  0,
-                     0,  0]
-IntialBishoparray = [  1,
-                    0,  0,
-                         0,
-                          0,
-                           0,
-                            0,
-                             0,
-                              0]
-InitialQueenarray = [1, 0, 0, 0, 0, 0, 0, 0,
-                     0, 0,
-                     0,     0, 
-                     0,        0,
-                     0,           0, 
-                     0,             0,
-                     0,                0,
-                     0,                    0]
-InitialKingarray = [0, 1, 0,
-                     0, 0, 0]
+#This is the Through the Looking-glass chess game in code.
+InitialChessboard = [[0, 0, 0, 0, 0, 0, "N", 0],
+                     [0, 0, 0, 0, 0, 0, 0, 0,], 
+                     [0, 0, "K", 0, 0, 0, 0, 0], 
+                     [0, 0, 0, 0, 0, "N", 0, 0],
+                     [0, 0, 0, 0, "K", 0, 0, 0],
+                     [0, 0, 0, 0, 0, 0, 0, 0],
+                     [0, 0, 0, "P", "Q", 0, 0, 0],
+                     [0, 0, "Q", 0, 0, "R", 0, 0]]
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+InitialChessboard[6][4] = 0
+InitialChessboard[3][7] = "Q"
+print("The first move is:")
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Next")
+InitialChessboard[6][3] = 0
+InitialChessboard[4][3] = "P"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The white queen moves:")
+InitialChessboard[7][2] = 0
+InitialChessboard[4][2] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The next move is:")
+InitialChessboard[4][2] = 0
+InitialChessboard[3][2] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The pawn moves forward")
+InitialChessboard[4][3] = 0
+InitialChessboard[4][2] = "P"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The white queen's move into danger:")
+InitialChessboard[3][2] = 0
+InitialChessboard[0][5] = "Q"
