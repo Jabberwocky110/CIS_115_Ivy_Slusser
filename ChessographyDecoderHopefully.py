@@ -149,3 +149,31 @@ for rows in InitialChessboard:
     for value in rows:
         print(value, end = " ")
     print()
+print("The pawn advances:")
+InitialChessboard[1][3] = 0
+InitialChessboard[0][4] = "P"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("The red queen moves beside the white queen:")
+InitialChessboard[3][7] = 0
+InitialChessboard[0][4] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Castling")
+InitialChessboard[0][2] = 0
+InitialChessboard[2][0] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Alice takes the red queen:")
+InitialChessboard[0][3] = 0
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
+print("Checkmate!")
