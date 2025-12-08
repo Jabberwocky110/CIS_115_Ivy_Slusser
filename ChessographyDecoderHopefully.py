@@ -95,7 +95,7 @@ for rows in InitialChessboard:
     print()
 print("The pawn moves forward")
 InitialChessboard[4][3] = 0
-InitialChessboard[4][2] = "P"
+InitialChessboard[3][3] = "P"
 for rows in InitialChessboard:
     for value in rows:
         print(value, end = " ")
@@ -103,3 +103,7 @@ for rows in InitialChessboard:
 print("The white queen's move into danger:")
 InitialChessboard[3][2] = 0
 InitialChessboard[0][5] = "Q"
+for rows in InitialChessboard:
+    for value in rows:
+        print(value, end = " ")
+    print()
