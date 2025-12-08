@@ -192,3 +192,6 @@ end_row = starting_row + PossibleInitialletterArray.shape[0]
 end_column = starting_column + PossibleInitialletterArray.shape[1]
 chessography_array[starting_row:end_row, starting_column:end_column] = PossibleInitialletterArray
 print(chessography_array)
+Initial_Letters = ["a", "h", "k", "s", "t", "v", "y"]
+PossibleWord = "productions"
+EncryptedWord = "jabberwocky"
