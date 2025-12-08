@@ -10,5 +10,3 @@ import os
 os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY"
 from google import genai
 client = genai.Client()
-
-
