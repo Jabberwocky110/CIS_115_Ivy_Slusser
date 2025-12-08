@@ -6,9 +6,9 @@ with sr.Microphone() as source:
   Speech = r.listen(source)
   Text = (Speech)
   Input = input(Text)
-  RecognizedSpeech = r.recognize_google(Input)
 import os
 os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY"
 from google import genai
 client = genai.Client()
+
 
