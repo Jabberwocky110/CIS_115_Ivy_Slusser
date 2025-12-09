@@ -87,6 +87,7 @@ for rows in InitialChessboard:
     for value in rows:
         print(value, end = " ")
     print()
+#Here, there is no move so the grid moves forward and stops.
 print("The next move is:")
 InitialChessboard[4][2] = 0
 InitialChessboard[3][2] = "Q"
@@ -192,6 +193,11 @@ end_row = starting_row + PossibleInitialletterArray.shape[0]
 end_column = starting_column + PossibleInitialletterArray.shape[1]
 chessography_array[starting_row:end_row, starting_column:end_column] = PossibleInitialletterArray
 print(chessography_array)
+#When no piece moves, does the algorithm capture the location?
 Initial_Letters = ["a", "h", "k", "s", "t", "v", "y"]
+Next_Letters = ["e", "l", "m", "n", "o"]
 PossibleWord = "productions"
 EncryptedWord = "jabberwocky"
+#Grid moves to capture these letters. The white knight moves to the same place twice (b). It's somehow based on piece arrangement.
+nonincludedwords = ["b", "r", "w", "c", "j"]
+IncludedLeters = ["a", "k", "y", "e", "o"]
