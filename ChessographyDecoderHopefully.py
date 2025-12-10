@@ -256,7 +256,16 @@ def FaliedAttempt1():
  end_column3 = starting_column3 + Reversed_array2.shape[1]
  chessography_array3[starting_row3:end_row3, starting_column3:end_column3] = Reversed_array2
  print(chessography_array3)
- #The horse and king are on the two remaining letters. Why the others aren't included, I am unsure. Additionally, the code could be encrypting other words at this point or there are rules that I am unaware of. 
+ #The white horse and red king are on the two remaining letters. Why the others aren't included, I am unsure. Additionally, the code could be encrypting other words at this point or there are rules that I am unaware of.
+ #Continuation od the decryption. (Possibly other words?) What about the extra letters? What rules do I need to add?
+ Reversed_array2[[0, 1]] = Reversed_array2[[1, 0]]
+ print(Reversed_array2)
+ #The pawn leaves the encryption grid, and I believe that the grid follows it. 
+ #The grid moves upwards with this also. 
+ HorizontalReversedArray2 = Reversed_array2[:, ::-1]
+ print(HorizontalReversedArray2)
+ #Are there no movements for knights or do knights have to only move within the original grid?
+ #This is never going to work unless I decode the entire poem this way, and I don't think that it's possible.
 FaliedAttempt1()
-#This code is insane. 
+#This code is insane and too unorthadox to explain. 
 #The poem could be decrypted manually. 
