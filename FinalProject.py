@@ -177,10 +177,13 @@ for numbers in spacelist2:
    CatologPrint5 = " " * numbers
    CatalogList2.append(CatologPrint5)
 #Another spacing customization is created.
+spaceList3 = []
+for value in lengthList:
+  value8 = int(10 - value)
+  spaceList3.append(value8)
 CatalogList3 = []
-for value in spaceList:
-   value7 = value + 3
-   CatologPrint6 = value7 * " "
+for value in spaceList3:
+   CatologPrint6 = value * " "
    CatalogList3.append(CatologPrint6)
 #Variables are created for specific space lengths.
 space5 = " " * 3
@@ -273,7 +276,7 @@ if len(cart) == 1:
  for values in CatalogList3:
   index = index + 1
   if index == ProductNumber:
-   print(f"SKU     Quantity   Price     Description{values}               Total")
+   print(f"SKU     Quantity   Price     Description   Total")
    print("*" * 77)
  #The catalog is enumerated, which essentially creating indexs for a dictionary in this case.
  for indexs, values in enumerate(Catalog.values()):
@@ -308,7 +311,7 @@ else:
     index = index + 1
     #The spacing of the total subtitle varies for different items in the cart.
     if index == ProductNumber1:
-     print(f"SKU     Quantity   Price     Description{values}         Total")
+     print(f"SKU     Quantity   Price     Description{values} Total")
      print("*" * 77)
    #The catalog values are granted indexs and taked from the catalog dictionary without the keys.
    for index, values in enumerate(Catalog.values()):
